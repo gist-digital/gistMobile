@@ -16,6 +16,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* gistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* gistTests.m */; };
 		71E6741C5564959AC3712009 /* libPods-gist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5776E126AC4D93C5809FAD /* libPods-gist.a */; };
+		74AD1B0C25A905B500707284 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74AD1B0B25A905B500707284 /* BootSplash.storyboard */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C295DA0E33136C098A695244 /* libPods-gist-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BA9CCAB69E627EC20D84EA /* libPods-gist-tvOSTests.a */; };
 		DED7063273930E357541C4A4 /* libPods-gist-gistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE267E7B4BF38D8C1EAAFFB5 /* libPods-gist-gistTests.a */; };
@@ -54,6 +55,7 @@
 		2D02E47B1E0B4A5D006451C7 /* gist-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gist-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* gist-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gist-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5776E126AC4D93C5809FAD /* libPods-gist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74AD1B0B25A905B500707284 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = gist/BootSplash.storyboard; sourceTree = "<group>"; };
 		78F132F8FD9ECC18B99731EC /* Pods-gist-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gist-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-gist-tvOSTests/Pods-gist-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = gist/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		871FF9C26C8C7B03BBADE23E /* Pods-gist-gistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gist-gistTests.debug.xcconfig"; path = "Target Support Files/Pods-gist-gistTests/Pods-gist-gistTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				74AD1B0B25A905B500707284 /* BootSplash.storyboard */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74AD1B0C25A905B500707284 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

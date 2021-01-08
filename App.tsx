@@ -8,7 +8,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,6 +18,7 @@ import {
   StatusBar,
 } from 'react-native';
 import * as Sentry from '@sentry/react-native';
+import RNBootSplash from 'react-native-bootsplash';
 
 import {
   Header,
@@ -35,6 +36,14 @@ Sentry.init({
 });
 
 const App = () => {
+  useEffect(() => {
+    const init = async () => {
+      await RNBootSplash.hide({fade: true});
+    };
+
+    init();
+  }, []);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
