@@ -10,10 +10,12 @@
 
 import React, {useEffect} from 'react';
 import * as Sentry from '@sentry/react-native';
+import {ThemeProvider} from '@shopify/restyle';
 import RNBootSplash from 'react-native-bootsplash';
 import {NavigationContainer} from '@react-navigation/native';
 
 import {SENTRY_DSN} from '@src/utils/constants';
+import {primaryTheme} from '@src/styles/theme';
 import {Auth} from '@src/navigation';
 
 declare const global: {HermesInternal: null | {}};
@@ -32,9 +34,11 @@ const App = () => {
   }, []);
 
   return (
-    <NavigationContainer>
-      <Auth />
-    </NavigationContainer>
+    <ThemeProvider theme={primaryTheme}>
+      <NavigationContainer>
+        <Auth />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 };
 

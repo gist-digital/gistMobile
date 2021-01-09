@@ -4,7 +4,11 @@ import {View, Text} from 'react-native';
 const Intro = () => {
   return (
     <View>
-      <Text>Gist</Text>
+      <Text>Gistsdsds</Text>
+      <Text>Gistsdsds</Text>
+      <Text>Gistsdsds</Text>
+      <Text>Gistsdsds</Text>
+      <Text>Gistsdsds</Text>
     </View>
   );
 };
