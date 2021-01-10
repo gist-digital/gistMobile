@@ -9,6 +9,8 @@ export const LIGHT = '#FFFFFF';
 export const GREY1 = '#B2B4B4';
 export const GREY2 = '#282828';
 export const PRIMARY = '#ED1C24';
+export const PRIMARY_ACCENT = '#A00D12';
+export const TRANSPARENT = 'transparent';
 
 // spacing
 export const XXS = RFValue(4);
@@ -37,3 +39,6 @@ export const PRIMARY_MEDIUM_FONT = 'TTNormsPro-Medium';
 // third party creds
 export const SENTRY_DSN =
   'https://d9e9630775f341fbbdaaea292b665d56@o404217.ingest.sentry.io/5580582';
+
+// misc
+export const BTN_TAP_OPACITY = 0.85;

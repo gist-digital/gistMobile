@@ -1,5 +1,5 @@
 import {createTheme} from '@shopify/restyle';
-import {RFPercentage} from 'react-native-responsive-fontsize';
+import {RFValue, RFPercentage} from 'react-native-responsive-fontsize';
 
 import {
   // spacing
@@ -17,6 +17,8 @@ import {
   GREY1,
   GREY2,
   PRIMARY,
+  TRANSPARENT,
+  PRIMARY_ACCENT,
 
   // fonts
   H1,
@@ -33,6 +35,8 @@ const palette = {
   grey1: GREY1,
   grey2: GREY2,
   primary: PRIMARY,
+  transparent: TRANSPARENT,
+  primaryAccent: PRIMARY_ACCENT,
 };
 
 export const primaryTheme = createTheme({
@@ -42,6 +46,8 @@ export const primaryTheme = createTheme({
     grey1: palette.grey1,
     grey2: palette.grey2,
     primary: palette.primary,
+    transparent: palette.transparent,
+    primaryAccent: palette.primaryAccent,
   },
   spacing: {
     xxs: XXS,
@@ -81,6 +87,7 @@ export const primaryTheme = createTheme({
   breakpoints: {},
   zIndices: {},
   borderRadii: {
+    m: RFValue(25),
     full: RFPercentage(50),
   },
 });

@@ -5,7 +5,8 @@ import Onboarding from 'react-native-onboarding-swiper';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import {Theme} from '@src/styles/theme';
-import {Text, Image} from '@src/components';
+import {dummyFunc} from '@src/utils/helpers';
+import {Text, Image, Box, Button} from '@src/components';
 import {
   L,
   XL9,
@@ -49,13 +50,24 @@ const Intro = () => {
             />
           ),
           subtitle: (
-            <Text
-              color="light"
-              variant="bodyL"
-              textAlign="center"
-              fontFamily={PRIMARY_MEDIUM_FONT}>
-              Gist is slang for lowkey conversations
-            </Text>
+            <>
+              <Text
+                color="light"
+                variant="bodyL"
+                textAlign="center"
+                fontFamily={PRIMARY_MEDIUM_FONT}>
+                Gist is slang for lowkey conversations
+              </Text>
+
+              <Box width="100%">
+                <Button
+                  size="s"
+                  type="outline"
+                  onPress={dummyFunc}
+                  label="Ok, sign me up"
+                />
+              </Box>
+            </>
           ),
         },
         {
