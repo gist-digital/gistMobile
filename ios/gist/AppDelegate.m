@@ -5,6 +5,8 @@
 #import <React/RCTRootView.h>
 
 #import "RNBootSplash.h" // https://github.com/zoontek/react-native-bootsplash
+#import "SDImageCodersManager.h" // https://github.com/DylanVann/react-native-fast-image/issues/476#issuecomment-500165731
+#import <SDWebImageWebPCoder/SDImageWebPCoder.h> // https://github.com/DylanVann/react-native-fast-image/issues/476#issuecomment-500165731
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
@@ -47,6 +49,7 @@ static void InitializeFlipper(UIApplication *application) {
   [self.window makeKeyAndVisible];
 
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView]; // https://github.com/zoontek/react-native-bootsplash
+  [SDImageCodersManager.sharedManager addCoder:SDImageWebPCoder.sharedCoder]; // https://github.com/DylanVann/react-native-fast-image/issues/476#issuecomment-500165731
 
   return YES;
 }

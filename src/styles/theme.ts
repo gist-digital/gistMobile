@@ -1,7 +1,31 @@
 import {createTheme} from '@shopify/restyle';
-import {RFValue, RFPercentage} from 'react-native-responsive-fontsize';
+import {RFPercentage} from 'react-native-responsive-fontsize';
 
-import {DARK, LIGHT, GREY1, GREY2, PRIMARY} from '@src/utils/constants';
+import {
+  // spacing
+  NEGATIVE,
+  XXS,
+  XS,
+  S,
+  M,
+  L,
+  XL,
+
+  // colors
+  DARK,
+  LIGHT,
+  GREY1,
+  GREY2,
+  PRIMARY,
+
+  // fonts
+  H1,
+  H2,
+  H3,
+  BODY_L,
+  BODY_M,
+  BODY_S,
+} from '@src/utils/constants';
 
 const palette = {
   dark: DARK,
@@ -20,19 +44,39 @@ export const primaryTheme = createTheme({
     primary: palette.primary,
   },
   spacing: {
-    xxs: RFValue(4),
-    xs: RFValue(8),
-    s: RFValue(16),
-    m: RFValue(24),
-    l: RFValue(32),
-    xl: RFValue(40),
+    xxs: XXS,
+    xs: XS,
+    s: S,
+    m: M,
+    l: L,
+    xl: XL,
 
-    '-xxs': RFValue(-4),
-    '-xs': RFValue(-8),
-    '-s': RFValue(-16),
-    '-m': RFValue(-24),
-    '-l': RFValue(-32),
-    '-xl': RFValue(-40),
+    '-xxs': XXS * NEGATIVE,
+    '-xs': XS * NEGATIVE,
+    '-s': S * NEGATIVE,
+    '-m': M * NEGATIVE,
+    '-l': L * NEGATIVE,
+    '-xl': XL * NEGATIVE,
+  },
+  textVariants: {
+    h1: {
+      fontSize: H1,
+    },
+    h2: {
+      fontSize: H2,
+    },
+    h3: {
+      fontSize: H3,
+    },
+    bodyL: {
+      fontSize: BODY_L,
+    },
+    bodyM: {
+      fontSize: BODY_M,
+    },
+    bodyS: {
+      fontSize: BODY_S,
+    },
   },
   breakpoints: {},
   zIndices: {},

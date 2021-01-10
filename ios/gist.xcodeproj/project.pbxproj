@@ -20,6 +20,8 @@
 		C295DA0E33136C098A695244 /* libPods-gist-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BA9CCAB69E627EC20D84EA /* libPods-gist-tvOSTests.a */; };
 		DED7063273930E357541C4A4 /* libPods-gist-gistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE267E7B4BF38D8C1EAAFFB5 /* libPods-gist-gistTests.a */; };
 		E160F47CFAA37BCFC1B530CE /* libPods-gist-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 903EF54D3DA1262300A2C3E3 /* libPods-gist-tvOS.a */; };
+		2C5F399686244C4DB090CA61 /* TTNormsPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5430F684FC1C4B54B6987D80 /* TTNormsPro-Medium.otf */; };
+		4817E6B15B8C454183D7BD6C /* TTNormsPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6930D971BF4244E093D806E1 /* TTNormsPro-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F3A8B41D55793D06E08776A7 /* Pods-gist-gistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gist-gistTests.release.xcconfig"; path = "Target Support Files/Pods-gist-gistTests/Pods-gist-gistTests.release.xcconfig"; sourceTree = "<group>"; };
 		F624BBE5D3388F507DF25F1A /* Pods-gist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gist.release.xcconfig"; path = "Target Support Files/Pods-gist/Pods-gist.release.xcconfig"; sourceTree = "<group>"; };
+		5430F684FC1C4B54B6987D80 /* TTNormsPro-Medium.otf */ = {isa = PBXFileReference; name = "TTNormsPro-Medium.otf"; path = "../src/assets/fonts/TTNormsPro/TTNormsPro-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6930D971BF4244E093D806E1 /* TTNormsPro-Regular.otf */ = {isa = PBXFileReference; name = "TTNormsPro-Regular.otf"; path = "../src/assets/fonts/TTNormsPro/TTNormsPro-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				F49596687CF85560DE4FCADA /* Pods */,
+				5EFB93E9A25E46DBAAA12EB9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -196,6 +201,16 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		5EFB93E9A25E46DBAAA12EB9 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				5430F684FC1C4B54B6987D80 /* TTNormsPro-Medium.otf */,
+				6930D971BF4244E093D806E1 /* TTNormsPro-Regular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -343,6 +358,8 @@
 			files = (
 				74185E9725AA3483000B7451 /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2C5F399686244C4DB090CA61 /* TTNormsPro-Medium.otf in Resources */,
+				4817E6B15B8C454183D7BD6C /* TTNormsPro-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
