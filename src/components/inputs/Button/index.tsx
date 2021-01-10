@@ -4,7 +4,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import Base from './Base';
 import Text from '../../content/Text';
 import {ButtonProps} from '@src/interfaces/inputs';
-import {PRIMARY_MEDIUM_FONT} from '@src/utils/constants';
+import {L, XL6, PRIMARY_MEDIUM_FONT} from '@src/utils/constants';
 
 export const Button: FC<ButtonProps> = ({
   onPress,
@@ -23,7 +23,7 @@ export const Button: FC<ButtonProps> = ({
       borderRadius="m"
       onPress={onPress}
       borderWidth={RFValue(2)}
-      padding={isSmall ? 'xs' : 's'}
+      height={isSmall ? L : XL6}
       borderColor={isPrimary ? 'primary' : isSecondary ? 'light' : 'grey1'}
       backgroundColor={
         isPrimary ? 'primary' : isSecondary ? 'light' : 'transparent'

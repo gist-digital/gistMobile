@@ -19,7 +19,7 @@ const Button: FC<BaseButtonProps> = ({onPress, children, ...rest}) => {
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={BTN_TAP_OPACITY}>
-      <Box {...props} alignItems="center">
+      <Box {...props} alignItems="center" justifyContent="center">
         {children}
       </Box>
     </TouchableOpacity>

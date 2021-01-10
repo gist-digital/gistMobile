@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 import {useTheme} from '@shopify/restyle';
 import Onboarding from 'react-native-onboarding-swiper';
 import {RFValue} from 'react-native-responsive-fontsize';
@@ -29,91 +29,93 @@ const Intro = () => {
   const {dark} = theme.colors;
 
   return (
-    <Onboarding
-      skipToPage={2}
-      showDone={false}
-      titleStyles={styles.titleStyles}
-      nextLabel={<Label label="Next" />}
-      skipLabel={<Label label="Skip" />}
-      containerStyles={styles.containerStyles}
-      imageContainerStyles={styles.imageContainerStyles}
-      pages={[
-        {
-          title: '',
-          backgroundColor: dark,
-          image: (
-            <Image
-              width={imgHeight}
-              height={imgHeight}
-              resizeMode="contain"
-              source={require('../../../assets/images/speak.webp')}
-            />
-          ),
-          subtitle: (
-            <>
-              <Text
-                color="light"
-                variant="bodyL"
-                textAlign="center"
-                fontFamily={PRIMARY_MEDIUM_FONT}>
-                Gist is slang for lowkey conversations
-              </Text>
-
-              <Box width="100%">
-                <Button
-                  size="s"
-                  type="outline"
-                  onPress={dummyFunc}
-                  label="Ok, sign me up"
-                />
+    <>
+      <StatusBar barStyle="light-content" />
+      <Onboarding
+        skipToPage={2}
+        showDone={false}
+        titleStyles={styles.titleStyles}
+        nextLabel={<Label label="Next" />}
+        skipLabel={<Label label="Skip" />}
+        containerStyles={styles.containerStyles}
+        imageContainerStyles={styles.imageContainerStyles}
+        pages={[
+          {
+            title: '',
+            backgroundColor: dark,
+            image: (
+              <Image
+                width={imgHeight}
+                height={imgHeight}
+                resizeMode="contain"
+                source={require('../../../assets/images/speak.webp')}
+              />
+            ),
+            subtitle: (
+              <Box width="100%" maxWidth={RFValue(225)}>
+                <Text
+                  color="light"
+                  variant="bodyL"
+                  textAlign="center"
+                  fontFamily={PRIMARY_MEDIUM_FONT}>
+                  Gist is slang for lowkey conversations
+                </Text>
               </Box>
-            </>
-          ),
-        },
-        {
-          title: '',
-          backgroundColor: dark,
-          image: (
-            <Image
-              width={imgHeight}
-              height={imgHeight}
-              resizeMode="contain"
-              source={require('../../../assets/images/mic.webp')}
-            />
-          ),
-          subtitle: (
-            <Text
-              color="light"
-              variant="bodyL"
-              textAlign="center"
-              fontFamily={PRIMARY_MEDIUM_FONT}>
-              You can record & listen to new Gist
-            </Text>
-          ),
-        },
-        {
-          title: '',
-          backgroundColor: dark,
-          image: (
-            <Image
-              width={imgHeight}
-              height={imgHeight}
-              resizeMode="contain"
-              source={require('../../../assets/images/eyes.webp')}
-            />
-          ),
-          subtitle: (
-            <Text
-              color="light"
-              variant="bodyL"
-              textAlign="center"
-              fontFamily={PRIMARY_MEDIUM_FONT}>
-              Or join Gist Rooms with friends and influencers
-            </Text>
-          ),
-        },
-      ]}
-    />
+            ),
+          },
+          {
+            title: '',
+            backgroundColor: dark,
+            image: (
+              <Image
+                width={imgHeight}
+                height={imgHeight}
+                resizeMode="contain"
+                source={require('../../../assets/images/mic.webp')}
+              />
+            ),
+            subtitle: (
+              <Box width="100%" maxWidth={RFValue(225)}>
+                <Text
+                  color="light"
+                  variant="bodyL"
+                  textAlign="center"
+                  fontFamily={PRIMARY_MEDIUM_FONT}>
+                  You can record & listen to new Gist
+                </Text>
+              </Box>
+            ),
+          },
+          {
+            title: '',
+            backgroundColor: dark,
+            image: (
+              <Image
+                width={imgHeight}
+                height={imgHeight}
+                resizeMode="contain"
+                source={require('../../../assets/images/eyes.webp')}
+              />
+            ),
+            subtitle: (
+              <Box width="100%" maxWidth={RFValue(225)}>
+                <Text
+                  color="light"
+                  variant="bodyL"
+                  textAlign="center"
+                  fontFamily={PRIMARY_MEDIUM_FONT}>
+                  Or join Gist Rooms with friends and influencers
+                </Text>
+
+                <Box width="100%" marginTop="xl">
+                  <Button onPress={dummyFunc} label="Ok, sign me up" />
+                </Box>
+              </Box>
+            ),
+          },
+        ]}
+      />
+    </>
   );
 };
 
