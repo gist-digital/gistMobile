@@ -2,9 +2,11 @@ import {RFValue} from 'react-native-responsive-fontsize';
 
 // routes
 export const INTRO = 'Intro';
+export const LOGIN = 'Login';
 export const REGISTER = 'Register';
 
 // colors
+export const ALT = '#FFC177';
 export const DARK = '#000000';
 export const LIGHT = '#FFFFFF';
 export const GREY1 = '#B2B4B4';
@@ -36,12 +38,17 @@ export const H3 = RFValue(20);
 export const BODY_L = RFValue(17);
 export const BODY_M = RFValue(15);
 export const BODY_S = RFValue(13);
-export const PRIMARY_REGULAR_FONT = 'TTNormsPro-Regular';
 export const PRIMARY_MEDIUM_FONT = 'TTNormsPro-Medium';
+export const PRIMARY_REGULAR_FONT = 'TTNormsPro-Regular';
 
 // third party creds
 export const SENTRY_DSN =
   'https://d9e9630775f341fbbdaaea292b665d56@o404217.ingest.sentry.io/5580582';
+
+// error messages
+export const REQUIRED_EMAIL = 'Email is a required field';
+export const INVALID_EMAIL = 'Email must be a valid email';
+export const REQUIRED_PASSWORD = 'Password is a required field';
 
 // misc
 export const BTN_TAP_OPACITY = 0.85;

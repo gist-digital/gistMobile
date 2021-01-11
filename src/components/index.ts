@@ -5,7 +5,12 @@ export {default as Image} from './content/Image';
 
 // inputs
 export {default as Button} from './inputs/Button';
+export {default as TextInput} from './inputs/TextInput';
 
 // native
 export {default as ScrollView} from './native/ScrollView';
 export {default as SafeAreaView} from './native/SafeAreaView';
+export {default as KeyboardAvoidingView} from './native/KeyboardAvoidingView';
+
+// forms
+export {default as LoginForm} from './forms/Login';

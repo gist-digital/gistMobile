@@ -11,6 +11,7 @@ export const Button: FC<ButtonProps> = ({
   label,
   size = 'm',
   icon = null,
+  disabled = false,
   type = 'primary',
 }) => {
   const isPrimary = type === 'primary';
@@ -22,6 +23,7 @@ export const Button: FC<ButtonProps> = ({
     <Base
       borderRadius="m"
       onPress={onPress}
+      disabled={disabled}
       borderWidth={RFValue(2)}
       height={isSmall ? L : XL6}
       borderColor={isPrimary ? 'primary' : isSecondary ? 'light' : 'grey1'}

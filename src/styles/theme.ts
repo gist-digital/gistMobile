@@ -15,6 +15,7 @@ import {
   XL12,
 
   // colors
+  ALT,
   DARK,
   LIGHT,
   GREY1,
@@ -33,6 +34,7 @@ import {
 } from '@src/utils/constants';
 
 const palette = {
+  alt: ALT,
   dark: DARK,
   light: LIGHT,
   grey1: GREY1,
@@ -44,6 +46,7 @@ const palette = {
 
 export const primaryTheme = createTheme({
   colors: {
+    alt: palette.alt,
     dark: palette.dark,
     light: palette.light,
     grey1: palette.grey1,

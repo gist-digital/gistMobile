@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {TouchableOpacity} from 'react-native';
+import {RFValue} from 'react-native-responsive-fontsize';
 
-import {dummyFunc} from '@src/utils/helpers';
 import {
   Box,
   Text,
@@ -16,6 +16,8 @@ import {
   PRIMARY_REGULAR_FONT,
   PRIMARY_MEDIUM_FONT,
 } from '@src/utils/constants';
+import {logo} from '@src/utils/helpers';
+import {dummyFunc} from '@src/utils/helpers';
 
 const twitter = require('../../../assets/images/twitter.webp');
 const facebook = require('../../../assets/images/facebook.webp');
@@ -33,7 +35,16 @@ const Register = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Box flex={1} paddingHorizontal="l" paddingVertical="xl12">
+        <Box flex={1} paddingHorizontal="l" paddingVertical="xl6">
+          <Box alignItems="center">
+            <Image
+              source={logo}
+              width={RFValue(70)}
+              resizeMode="contain"
+              height={RFValue(106)}
+            />
+          </Box>
+
           <Text
             variant="h2"
             color="light"

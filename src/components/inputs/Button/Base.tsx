@@ -14,11 +14,19 @@ import Box from '../../content/Box';
 
 const restyleFunctions = [spacing, border, layout, backgroundColor];
 
-const Button: FC<BaseButtonProps> = ({onPress, children, ...rest}) => {
+const Button: FC<BaseButtonProps> = ({
+  onPress,
+  disabled,
+  children,
+  ...rest
+}) => {
   const props = useRestyle(restyleFunctions, rest);
 
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={BTN_TAP_OPACITY}>
+    <TouchableOpacity
+      onPress={onPress}
+      disabled={disabled}
+      activeOpacity={BTN_TAP_OPACITY}>
       <Box
         {...props}
         position="relative"

@@ -1,4 +1,5 @@
 import {ReactNode} from 'react';
+import {TextInputProps as RNTextInputProps} from 'react-native';
 import {
   SpacingProps,
   BorderProps,
@@ -13,11 +14,20 @@ export type BaseButtonProps = SpacingProps<Theme> &
   LayoutProps<Theme> &
   BackgroundColorProps<Theme> & {
     onPress: () => void;
+    disabled?: boolean;
   };
 
-export type ButtonProps = Pick<BaseButtonProps, 'onPress'> & {
+export type ButtonProps = Pick<BaseButtonProps, 'onPress' | 'disabled'> & {
   label: string;
   size?: 's' | 'm';
   icon?: ReactNode;
   type?: 'primary' | 'secondary' | 'outline';
 };
+
+export type TextFieldProps = Pick<SpacingProps<Theme>, 'marginBottom'> &
+  Pick<
+    RNTextInputProps,
+    'onChangeText' | 'onBlur' | 'value' | 'placeholder' | 'secureTextEntry'
+  > & {
+    error?: string;
+  };
