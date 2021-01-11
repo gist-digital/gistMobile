@@ -1,5 +1,6 @@
-import {INTRO} from '@src/utils/constants';
+import {INTRO, REGISTER} from '@src/utils/constants';
 
 export type AuthStackParamList = {
   [INTRO]: undefined;
+  [REGISTER]: undefined;
 };

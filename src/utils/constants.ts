@@ -2,6 +2,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 
 // routes
 export const INTRO = 'Intro';
+export const REGISTER = 'Register';
 
 // colors
 export const DARK = '#000000';
@@ -24,6 +25,8 @@ export const XL6 = RFValue(48);
 // export const XL8 = RFValue(64);
 export const XL9 = RFValue(72);
 // export const XL10 = RFValue(80);
+// export const XL11 = RFValue(88);
+export const XL12 = RFValue(96);
 export const NEGATIVE = -1;
 
 // fonts

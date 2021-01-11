@@ -10,6 +10,9 @@ import {
   M,
   L,
   XL,
+  XL6,
+  XL9,
+  XL12,
 
   // colors
   DARK,
@@ -56,6 +59,9 @@ export const primaryTheme = createTheme({
     m: M,
     l: L,
     xl: XL,
+    xl6: XL6,
+    xl9: XL9,
+    xl12: XL12,
 
     '-xxs': XXS * NEGATIVE,
     '-xs': XS * NEGATIVE,

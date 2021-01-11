@@ -15,6 +15,9 @@ import {
 } from '@src/utils/constants';
 
 const imgHeight = RFValue(160);
+const speak = require('../../../assets/images/speak.webp');
+const mic = require('../../../assets/images/mic.webp');
+const eyes = require('../../../assets/images/eyes.webp');
 
 const Label: FC<{label: string}> = ({label}) => {
   return (
@@ -24,10 +27,38 @@ const Label: FC<{label: string}> = ({label}) => {
   );
 };
 
+const SubTitle: FC<{text: string}> = ({text, children}) => {
+  return (
+    <Box width="100%" maxWidth={RFValue(225)}>
+      <Text
+        color="light"
+        variant="bodyL"
+        textAlign="center"
+        fontFamily={PRIMARY_MEDIUM_FONT}>
+        {text}
+      </Text>
+
+      {children}
+    </Box>
+  );
+};
+
+const SlideImage: FC<{source: number}> = ({source}) => {
+  return (
+    <Image
+      source={source}
+      width={imgHeight}
+      height={imgHeight}
+      resizeMode="contain"
+    />
+  );
+};
+
 const Intro = () => {
   const theme = useTheme<Theme>();
   const {dark} = theme.colors;
 
+  const pagesObj = {title: '', backgroundColor: dark};
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -41,76 +72,26 @@ const Intro = () => {
         imageContainerStyles={styles.imageContainerStyles}
         pages={[
           {
-            title: '',
-            backgroundColor: dark,
-            image: (
-              <Image
-                width={imgHeight}
-                height={imgHeight}
-                resizeMode="contain"
-                source={require('../../../assets/images/speak.webp')}
-              />
-            ),
+            ...pagesObj,
+            image: <SlideImage source={speak} />,
             subtitle: (
-              <Box width="100%" maxWidth={RFValue(225)}>
-                <Text
-                  color="light"
-                  variant="bodyL"
-                  textAlign="center"
-                  fontFamily={PRIMARY_MEDIUM_FONT}>
-                  Gist is slang for lowkey conversations
-                </Text>
-              </Box>
+              <SubTitle text="Gist is slang for lowkey conversations" />
             ),
           },
           {
-            title: '',
-            backgroundColor: dark,
-            image: (
-              <Image
-                width={imgHeight}
-                height={imgHeight}
-                resizeMode="contain"
-                source={require('../../../assets/images/mic.webp')}
-              />
-            ),
-            subtitle: (
-              <Box width="100%" maxWidth={RFValue(225)}>
-                <Text
-                  color="light"
-                  variant="bodyL"
-                  textAlign="center"
-                  fontFamily={PRIMARY_MEDIUM_FONT}>
-                  You can record & listen to new Gist
-                </Text>
-              </Box>
-            ),
+            ...pagesObj,
+            image: <SlideImage source={mic} />,
+            subtitle: <SubTitle text="You can record & listen to new Gist" />,
           },
           {
-            title: '',
-            backgroundColor: dark,
-            image: (
-              <Image
-                width={imgHeight}
-                height={imgHeight}
-                resizeMode="contain"
-                source={require('../../../assets/images/eyes.webp')}
-              />
-            ),
+            ...pagesObj,
+            image: <SlideImage source={eyes} />,
             subtitle: (
-              <Box width="100%" maxWidth={RFValue(225)}>
-                <Text
-                  color="light"
-                  variant="bodyL"
-                  textAlign="center"
-                  fontFamily={PRIMARY_MEDIUM_FONT}>
-                  Or join Gist Rooms with friends and influencers
-                </Text>
-
+              <SubTitle text="Or join Gist Rooms with friends and influencers">
                 <Box width="100%" marginTop="xl">
                   <Button onPress={dummyFunc} label="Ok, sign me up" />
                 </Box>
-              </Box>
+              </SubTitle>
             ),
           },
         ]}
