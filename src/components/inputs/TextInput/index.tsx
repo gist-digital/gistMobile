@@ -59,6 +59,7 @@ const TextInput: FC<TextFieldProps> = ({
 const styles = StyleSheet.create({
   input: {
     flex: 1,
+    width: '100%',
     height: '100%',
   },
 });

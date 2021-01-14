@@ -1,101 +1,109 @@
-import React, {FC} from 'react';
-import {TouchableOpacity} from 'react-native';
-import {RFValue} from 'react-native-responsive-fontsize';
+import React, {FC, useState} from 'react';
+import {Dimensions} from 'react-native';
+import {TabView, SceneMap} from 'react-native-tab-view';
 
 import {
   Box,
   Text,
-  Image,
-  Button,
   ScrollView,
   SafeAreaView,
+  RegistrationStep1,
+  RegistrationStep2,
+  KeyboardAvoidingView,
 } from '@src/components';
-import {
-  M,
-  BTN_TAP_OPACITY,
-  PRIMARY_REGULAR_FONT,
-  PRIMARY_MEDIUM_FONT,
-} from '@src/utils/constants';
-import {logo} from '@src/utils/helpers';
 import {dummyFunc} from '@src/utils/helpers';
+import {XL8, XXS, PRIMARY_MEDIUM_FONT} from '@src/utils/constants';
 
-const twitter = require('../../../assets/images/twitter.webp');
-const facebook = require('../../../assets/images/facebook.webp');
-const instagram = require('../../../assets/images/instagram.webp');
+const initialLayout = {width: Dimensions.get('window').width};
+const routesInitialState = [
+  {key: 'first', title: 'Step1'},
+  {key: 'second', title: 'Step2'},
+  {key: 'third', title: 'Step3'},
+];
 
-const Icon: FC<{source: number}> = ({source}) => {
+const TabBar: FC<{activeIndex: number}> = ({activeIndex}) => {
   return (
-    <Box left={0} paddingLeft="s" position="absolute">
-      <Image source={source} width={M} height={M} resizeMode="cover" />
+    <Box marginTop="xl9" marginBottom="xl8" flexDirection="row">
+      <Box
+        width={XL8}
+        height={XXS}
+        borderRadius="m"
+        backgroundColor="primary"
+      />
+      <Box
+        width={XL8}
+        height={XXS}
+        borderRadius="m"
+        marginHorizontal="s"
+        backgroundColor={activeIndex >= 1 ? 'primary' : 'grey2'}
+      />
+      <Box
+        width={XL8}
+        height={XXS}
+        borderRadius="m"
+        backgroundColor={activeIndex === 2 ? 'primary' : 'grey2'}
+      />
     </Box>
   );
 };
 
+const Step1: FC = () => {
+  return (
+    <>
+      <Text variant="h2" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
+        What’s your name and email?
+      </Text>
+      <RegistrationStep1 handleSubmit={dummyFunc} />
+    </>
+  );
+};
+
+const Step2: FC = () => {
+  return (
+    <>
+      <Text variant="h2" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
+        Create your Gist username and password
+      </Text>
+      <RegistrationStep2 handleSubmit={dummyFunc} />
+    </>
+  );
+};
+
+const Step3: FC = () => {
+  return (
+    <>
+      <Text variant="h2" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
+        We recommend you listen to…
+      </Text>
+    </>
+  );
+};
+
 const Register = () => {
+  const [index, setIndex] = useState(0);
+  const [routes] = React.useState(routesInitialState);
+
+  const renderScene = SceneMap({
+    first: Step1,
+    second: Step2,
+    third: Step3,
+  });
+
   return (
     <SafeAreaView>
-      <ScrollView>
-        <Box flex={1} paddingHorizontal="l" paddingVertical="xl6">
-          <Box alignItems="center">
-            <Image
-              source={logo}
-              width={RFValue(70)}
-              resizeMode="contain"
-              height={RFValue(106)}
+      <KeyboardAvoidingView>
+        <ScrollView>
+          <Box flex={1} paddingHorizontal="l" paddingVertical="xl6">
+            <TabView
+              onIndexChange={setIndex}
+              renderScene={renderScene}
+              initialLayout={initialLayout}
+              navigationState={{index, routes}}
+              renderTabBar={() => <TabBar activeIndex={index} />}
             />
           </Box>
-
-          <Text
-            variant="h2"
-            color="light"
-            textAlign="center"
-            fontFamily={PRIMARY_MEDIUM_FONT}>
-            Speak your mind
-          </Text>
-
-          <Box marginTop="xl9">
-            <Button
-              type="outline"
-              onPress={dummyFunc}
-              label="Sign up with Twitter"
-              icon={<Icon source={twitter} />}
-            />
-          </Box>
-
-          <Box marginVertical="m">
-            <Button
-              type="outline"
-              onPress={dummyFunc}
-              label="Sign up with Facebook"
-              icon={<Icon source={facebook} />}
-            />
-          </Box>
-
-          <Box marginBottom="xl6">
-            <Button
-              type="outline"
-              onPress={dummyFunc}
-              label="Sign up with Instagram"
-              icon={<Icon source={instagram} />}
-            />
-          </Box>
-
-          <Box marginBottom="s">
-            <Button onPress={dummyFunc} label="Sign up" />
-          </Box>
-
-          <TouchableOpacity activeOpacity={BTN_TAP_OPACITY} onPress={dummyFunc}>
-            <Text
-              color="light"
-              variant="bodyL"
-              textAlign="center"
-              fontFamily={PRIMARY_REGULAR_FONT}>
-              Already have an account?{' '}
-              <Text textDecorationLine="underline">Sign in</Text>
-            </Text>
-          </TouchableOpacity>
-        </Box>
-      </ScrollView>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };

@@ -11,6 +11,7 @@ import {
   L,
   XL,
   XL6,
+  XL8,
   XL9,
   XL12,
 
@@ -63,6 +64,7 @@ export const primaryTheme = createTheme({
     l: L,
     xl: XL,
     xl6: XL6,
+    xl8: XL8,
     xl9: XL9,
     xl12: XL12,
 
