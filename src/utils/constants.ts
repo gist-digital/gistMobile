@@ -6,6 +6,8 @@ export const LOGIN = 'Login';
 export const REGISTER = 'Register';
 export const REGISTRATION_INTRO = 'RegistrationIntro';
 
+export const HOME = 'Home';
+
 // colors
 export const ALT = '#FFC177';
 export const DARK = '#000000';

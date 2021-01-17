@@ -16,7 +16,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import {SENTRY_DSN} from '@src/utils/constants';
 import {primaryTheme} from '@src/styles/theme';
-import {Auth} from '@src/navigation';
+import {Auth, App as AppNav} from '@src/navigation';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -36,7 +36,8 @@ const App = () => {
   return (
     <ThemeProvider theme={primaryTheme}>
       <NavigationContainer>
-        <Auth />
+        {/* <Auth /> */}
+        <AppNav />
       </NavigationContainer>
     </ThemeProvider>
   );
