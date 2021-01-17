@@ -7,13 +7,14 @@ const Image: FC<ImageProps> = ({
   width,
   height,
   source,
+  borderRadius = 0,
   resizeMode = 'cover',
 }) => {
   return (
     <FastImage
       source={source}
-      style={{width, height}}
       resizeMode={resizeMode}
+      style={{width, height, borderRadius}}
     />
   );
 };

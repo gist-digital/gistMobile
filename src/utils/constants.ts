@@ -3,8 +3,8 @@ import {RFValue} from 'react-native-responsive-fontsize';
 // routes
 export const INTRO = 'Intro';
 export const LOGIN = 'Login';
-export const REGISTRATION_INTRO = 'RegistrationIntro';
 export const REGISTER = 'Register';
+export const REGISTRATION_INTRO = 'RegistrationIntro';
 
 // colors
 export const ALT = '#FFC177';
