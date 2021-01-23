@@ -1,7 +1,9 @@
 // content
 export {default as Box} from './content/Box';
 export {default as Text} from './content/Text';
+export {default as Icon} from './content/Icon';
 export {default as Image} from './content/Image';
+export {default as Header} from './content/Header';
 // export {default as Gradient} from './content/Gradient';
 
 // inputs
