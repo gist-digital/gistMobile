@@ -56,11 +56,7 @@ const Header: FC<HeaderProps> = ({scene, LeftEl, RightEl}) => {
 
   return (
     <SafeAreaView>
-      <Box
-        paddingTop="m"
-        paddingBottom="xs"
-        paddingHorizontal="l"
-        backgroundColor="dark">
+      <Box paddingTop="s" paddingHorizontal="l" backgroundColor="dark">
         <Box
           flexWrap="wrap"
           flexDirection="row"

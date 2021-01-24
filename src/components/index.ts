@@ -4,7 +4,9 @@ export {default as Text} from './content/Text';
 export {default as Icon} from './content/Icon';
 export {default as Image} from './content/Image';
 export {default as Header} from './content/Header';
-// export {default as Gradient} from './content/Gradient';
+export {default as RoomItem} from './content/RoomItem';
+export {default as Gradient} from './content/Gradient';
+export {default as MaskedView} from './content/MaskedView';
 
 // inputs
 export {default as Button} from './inputs/Button';

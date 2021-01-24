@@ -11,7 +11,7 @@ export type ImageProps = {
   resizeMode?: ResizeMode;
 } & ImageStyle;
 
-type Icons = 'search';
+type Icons = 'bell' | 'home' | 'search';
 
 export type IconProps = {
   name: Icons;
@@ -25,4 +25,18 @@ export type IconsSVGProps = Omit<IconProps, 'name' | 'color'> & {color: string};
 export type HeaderProps = StackHeaderProps & {
   RightEl?: ReactElement;
   LeftEl?: ReactElement;
+};
+
+export type GradientProps = {
+  colors?: string[];
+};
+
+export type MaskedViewProps = {
+  element: ReactElement;
+};
+
+export type RoomItemProps = {
+  host: string;
+  title: string;
+  type: 'idea' | 'story' | 'trending' | 'fiction';
 };

@@ -98,6 +98,7 @@ export const primaryTheme = createTheme({
   breakpoints: {},
   zIndices: {},
   borderRadii: {
+    s: RFValue(10),
     m: RFValue(25),
     full: RFPercentage(50),
   },

@@ -5,6 +5,8 @@ import {M} from '@src/utils/constants';
 import {Theme} from '@src/styles/theme';
 import {IconProps} from '@src/interfaces/content';
 
+import Bell from './Bell';
+import Home from './Home';
 import Search from './Search';
 
 const Icon: FC<IconProps> = ({
@@ -17,6 +19,12 @@ const Icon: FC<IconProps> = ({
   const xmlColor = theme.colors[color];
 
   switch (name) {
+    case 'bell':
+      return <Bell width={width} height={height} color={xmlColor} />;
+
+    case 'home':
+      return <Home width={width} height={height} color={xmlColor} />;
+
     case 'search':
       return <Search width={width} height={height} color={xmlColor} />;
 

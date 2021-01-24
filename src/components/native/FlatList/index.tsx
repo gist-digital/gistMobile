@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import {FlatList as RNFlatList, FlatListProps} from 'react-native';
 
-const FlatList: FC<
-  Omit<FlatListProps<any>, 'style' | 'contentContainerStyle'>
-> = ({showsVerticalScrollIndicator = false, ...props}) => {
+const FlatList: FC<Omit<FlatListProps<any>, 'style'>> = ({
+  showsVerticalScrollIndicator = false,
+  ...props
+}) => {
   return (
     <RNFlatList
       {...props}
