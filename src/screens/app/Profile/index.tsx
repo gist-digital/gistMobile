@@ -28,7 +28,7 @@ const Profile = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Box flex={1} paddingHorizontal="l">
+        <Box flex={1} paddingTop="l" paddingHorizontal="l">
           <Box flexDirection="row">
             <Box marginRight="m" flexShrink={0}>
               <Image
@@ -57,7 +57,7 @@ const Profile = () => {
               </Text>
 
               <Box width={XL12}>
-                <Button onPress={dummyFunc} label="Following" size="s" />
+                <Button onPress={dummyFunc} label="Follow" size="s" />
               </Box>
             </Box>
           </Box>

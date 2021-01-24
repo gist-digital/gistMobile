@@ -9,7 +9,7 @@ const Stack = createStackNavigator<AuthStackParamList>();
 
 const Auth = () => {
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName={REGISTER}>
+    <Stack.Navigator headerMode="screen" initialRouteName={LOGIN}>
       <Stack.Screen
         name={INTRO}
         component={Intro}

@@ -8,7 +8,6 @@ import Box from '../Box';
 import Icon from '../Icon';
 import Text from '../Text';
 import Image from '../Image';
-import {logo} from '@src/utils/helpers';
 import {Theme} from '@src/styles/theme';
 import {HeaderProps} from '@src/interfaces/content';
 import {HeaderNavigationProps} from '@src/interfaces/navigation';
@@ -46,12 +45,7 @@ const DefaultTitle: FC = () => {
 
   return (
     <TouchableOpacity onPress={handleNav} activeOpacity={BTN_TAP_OPACITY}>
-      <Image
-        source={logo}
-        width={RFValue(70)}
-        resizeMode="contain"
-        height={RFValue(70)}
-      />
+      <Icon width={RFValue(60)} height={RFValue(60)} name="logo" />
     </TouchableOpacity>
   );
 };
@@ -75,6 +69,7 @@ const Header: FC<HeaderProps> = ({scene, LeftEl, RightEl}) => {
     <SafeAreaView>
       <Box paddingTop="s" paddingHorizontal="l" backgroundColor="dark">
         <Box
+          // backgroundColor="primary"
           flexWrap="wrap"
           flexDirection="row"
           alignItems="center"

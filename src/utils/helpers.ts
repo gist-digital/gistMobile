@@ -1,5 +1,3 @@
-export const logo = require('../assets/images/logo-full.webp');
-
 export const roomColorMap = {
   idea: ['#FF7EB0', '#803F58'],
   story: ['#FFDB3E', '#806E1F'],

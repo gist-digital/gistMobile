@@ -9,6 +9,7 @@ import ArrowLeft from './ArrowLeft';
 import Bell from './Bell';
 import Cog from './Cog';
 import Home from './Home';
+import Logo from './Logo';
 import Search from './Search';
 
 const Icon: FC<IconProps> = ({
@@ -32,6 +33,9 @@ const Icon: FC<IconProps> = ({
 
     case 'home':
       return <Home width={width} height={height} color={xmlColor} />;
+
+    case 'logo':
+      return <Logo width={width} height={height} color={xmlColor} />;
 
     case 'search':
       return <Search width={width} height={height} color={xmlColor} />;

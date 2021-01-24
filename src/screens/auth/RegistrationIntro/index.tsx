@@ -5,6 +5,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import {
   Box,
   Text,
+  Icon,
   Image,
   Button,
   ScrollView,
@@ -16,14 +17,13 @@ import {
   PRIMARY_REGULAR_FONT,
   PRIMARY_MEDIUM_FONT,
 } from '@src/utils/constants';
-import {logo} from '@src/utils/helpers';
 import {dummyFunc} from '@src/utils/helpers';
 
 const twitter = require('../../../assets/images/twitter.webp');
 const facebook = require('../../../assets/images/facebook.webp');
 const instagram = require('../../../assets/images/instagram.webp');
 
-const Icon: FC<{source: number}> = ({source}) => {
+const SocialIcon: FC<{source: number}> = ({source}) => {
   return (
     <Box left={0} paddingLeft="s" position="absolute">
       <Image source={source} width={M} height={M} resizeMode="cover" />
@@ -37,16 +37,12 @@ const RegistrationIntro = () => {
       <ScrollView>
         <Box flex={1} paddingHorizontal="l" paddingVertical="xl6">
           <Box alignItems="center">
-            <Image
-              source={logo}
-              width={RFValue(70)}
-              resizeMode="contain"
-              height={RFValue(106)}
-            />
+            <Icon width={RFValue(60)} height={RFValue(60)} name="logo" />
           </Box>
 
           <Text
             variant="h2"
+            marginTop="m"
             color="light"
             textAlign="center"
             fontFamily={PRIMARY_MEDIUM_FONT}>
@@ -58,7 +54,7 @@ const RegistrationIntro = () => {
               type="outline"
               onPress={dummyFunc}
               label="Sign up with Twitter"
-              icon={<Icon source={twitter} />}
+              icon={<SocialIcon source={twitter} />}
             />
           </Box>
 
@@ -67,7 +63,7 @@ const RegistrationIntro = () => {
               type="outline"
               onPress={dummyFunc}
               label="Sign up with Facebook"
-              icon={<Icon source={facebook} />}
+              icon={<SocialIcon source={facebook} />}
             />
           </Box>
 
@@ -76,7 +72,7 @@ const RegistrationIntro = () => {
               type="outline"
               onPress={dummyFunc}
               label="Sign up with Instagram"
-              icon={<Icon source={instagram} />}
+              icon={<SocialIcon source={instagram} />}
             />
           </Box>
 
