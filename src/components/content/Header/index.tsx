@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {SafeAreaView, TouchableOpacity} from 'react-native';
 import {useTheme} from '@shopify/restyle';
+import {useNavigation} from '@react-navigation/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import Box from '../Box';
@@ -11,7 +12,13 @@ import {logo} from '@src/utils/helpers';
 import {Theme} from '@src/styles/theme';
 import {dummyFunc} from '@src/utils/helpers';
 import {HeaderProps} from '@src/interfaces/content';
-import {XL, BTN_TAP_OPACITY, PRIMARY_MEDIUM_FONT} from '@src/utils/constants';
+import {HeaderNavigationProps} from '@src/interfaces/navigation';
+import {
+  XL,
+  SEARCH,
+  BTN_TAP_OPACITY,
+  PRIMARY_MEDIUM_FONT,
+} from '@src/utils/constants';
 
 const DefaultLeftEl: FC = () => {
   const theme = useTheme<Theme>();
@@ -43,8 +50,11 @@ const DefaultTitle: FC = () => {
 };
 
 const DefaultRightEl: FC = () => {
+  const navigation = useNavigation<HeaderNavigationProps>();
+  const handleNav = () => navigation.navigate(SEARCH);
+
   return (
-    <TouchableOpacity onPress={dummyFunc} activeOpacity={BTN_TAP_OPACITY}>
+    <TouchableOpacity onPress={handleNav} activeOpacity={BTN_TAP_OPACITY}>
       <Icon name="search" />
     </TouchableOpacity>
   );

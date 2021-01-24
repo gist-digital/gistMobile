@@ -11,8 +11,8 @@ import {
   MaskedView,
   SafeAreaView,
 } from '@src/components';
-import {dummyFunc} from '@src/utils/helpers';
 import {RoomItemProps} from '@src/interfaces/content';
+import {roomData, dummyFunc} from '@src/utils/helpers';
 import {XXS, S, M, BTN_TAP_OPACITY} from '@src/utils/constants';
 
 const StartRoomIcon: FC = () => {
@@ -25,33 +25,6 @@ const StartRoomIcon: FC = () => {
   );
 };
 
-const data = [
-  {
-    id: '01',
-    type: 'idea',
-    host: '@Sophia_A',
-    title: 'Late Night Conversations 🌚',
-  },
-  {
-    id: '02',
-    type: 'story',
-    host: '@MayaJ',
-    title: 'Mental Health: How to find the right therapist  💪',
-  },
-  {
-    id: '03',
-    type: 'trending',
-    host: '@JackT',
-    title: 'How can we effect change in Nigeria #EndSars ✊🏾',
-  },
-  {
-    id: '04',
-    type: 'fiction',
-    host: '@JackT',
-    title:
-      'Are you a poet or a writer? | Tips for writing your next best seller',
-  },
-];
 const Item: FC<RoomItemProps> = ({type, host, title}) => (
   <Box paddingHorizontal="l" marginBottom="m">
     <RoomItem type={type} host={host} title={title} />
@@ -71,7 +44,7 @@ const Home = () => {
     <SafeAreaView>
       <Box flex={1} position="relative">
         <FlatList
-          data={data}
+          data={roomData}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           contentContainerStyle={{paddingTop: S}}

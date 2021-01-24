@@ -1,3 +1,4 @@
+import {StackNavigationProp} from '@react-navigation/stack';
 import {
   INTRO,
   LOGIN,
@@ -5,6 +6,7 @@ import {
   REGISTRATION_INTRO,
   //
   HOME,
+  SEARCH,
 } from '@src/utils/constants';
 
 export type AuthStackParamList = {
@@ -16,4 +18,10 @@ export type AuthStackParamList = {
 
 export type AppStackParamList = {
   [HOME]: undefined;
+  [SEARCH]: undefined;
 };
+
+export type HeaderNavigationProps = StackNavigationProp<
+  AppStackParamList,
+  'Home' | 'Search'
+>;

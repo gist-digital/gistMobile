@@ -1,14 +1,21 @@
 import React, {FC} from 'react';
 import {ScrollView as RNScrollView, ScrollViewProps} from 'react-native';
 
-const ScrollView: FC<
-  Omit<ScrollViewProps, 'style' | 'contentContainerStyle'>
-> = ({children, showsVerticalScrollIndicator = false, ...props}) => {
+const ScrollView: FC<Omit<ScrollViewProps, 'style'>> = ({
+  children,
+  contentContainerStyle,
+  showsVerticalScrollIndicator = false,
+  showsHorizontalScrollIndicator = false,
+  ...props
+}) => {
+  const defaultStyle = {flexGrow: 1};
+
   return (
     <RNScrollView
       {...props}
-      contentContainerStyle={{flexGrow: 1}}
-      showsVerticalScrollIndicator={showsVerticalScrollIndicator}>
+      showsVerticalScrollIndicator={showsVerticalScrollIndicator}
+      contentContainerStyle={contentContainerStyle || defaultStyle}
+      showsHorizontalScrollIndicator={showsHorizontalScrollIndicator}>
       {children}
     </RNScrollView>
   );
