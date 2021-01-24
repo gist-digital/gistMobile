@@ -51,38 +51,20 @@ const RoomItem: FC<RoomItemProps> = ({type, host, title}) => {
               </Box>
             </Box>
 
-            <Box marginVertical="s">
-              <Text
-                color="light"
-                variant="bodyL"
-                fontFamily={PRIMARY_MEDIUM_FONT}>
-                {title}
-              </Text>
-            </Box>
+            <Text
+              color="light"
+              variant="bodyL"
+              marginVertical="s"
+              fontFamily={PRIMARY_MEDIUM_FONT}>
+              {title}
+            </Text>
 
-            <Box
-              flexWrap="wrap"
-              flexDirection="row"
-              alignItems="center"
-              marginHorizontal="-s">
-              <Box width="65%" paddingHorizontal="s">
-                <Text
-                  color="light"
-                  variant="bodyS"
-                  fontFamily={PRIMARY_REGULAR_FONT}>
-                  Hosted by {host}
-                </Text>
-              </Box>
-
-              <Box width="35%" paddingHorizontal="s">
-                <Text
-                  color="light"
-                  variant="bodyS"
-                  fontFamily={PRIMARY_REGULAR_FONT}>
-                  #Recorded
-                </Text>
-              </Box>
-            </Box>
+            <Text
+              color="light"
+              variant="bodyS"
+              fontFamily={PRIMARY_REGULAR_FONT}>
+              Hosted by {host}
+            </Text>
           </Box>
         </Gradient>
       </TouchableOpacity>

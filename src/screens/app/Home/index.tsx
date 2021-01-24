@@ -83,7 +83,7 @@ const Home = () => {
             <TouchableOpacity
               onPress={dummyFunc}
               activeOpacity={BTN_TAP_OPACITY}>
-              <Icon name="arrow_left" />
+              <Icon name="bell" />
             </TouchableOpacity>
           </Box>
         </Box>

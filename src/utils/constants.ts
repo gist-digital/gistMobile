@@ -34,6 +34,7 @@ export const XL9 = RFValue(72);
 export const XL10 = RFValue(80);
 // export const XL11 = RFValue(88);
 export const XL12 = RFValue(96);
+export const XL13 = RFValue(104);
 export const NEGATIVE = -1;
 
 // fonts
