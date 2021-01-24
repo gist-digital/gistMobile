@@ -7,6 +7,7 @@ import {
   //
   HOME,
   SEARCH,
+  PROFILE,
 } from '@src/utils/constants';
 
 export type AuthStackParamList = {
@@ -19,6 +20,7 @@ export type AuthStackParamList = {
 export type AppStackParamList = {
   [HOME]: undefined;
   [SEARCH]: undefined;
+  [PROFILE]: undefined;
 };
 
 export type HeaderNavigationProps = StackNavigationProp<

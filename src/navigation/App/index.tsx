@@ -2,8 +2,8 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Header} from '@src/components';
-import {Home, Search} from '@src/screens';
-import {HOME, SEARCH} from '@src/utils/constants';
+import {Home, Search, Profile} from '@src/screens';
+import {HOME, PROFILE, SEARCH} from '@src/utils/constants';
 import {AppStackParamList} from '@src/interfaces/navigation';
 
 const Stack = createStackNavigator<AppStackParamList>();
@@ -21,6 +21,12 @@ const App = () => {
         name={SEARCH}
         component={Search}
         options={{title: undefined, headerShown: false}}
+      />
+
+      <Stack.Screen
+        name={PROFILE}
+        component={Profile}
+        options={{title: undefined, header: Header}}
       />
     </Stack.Navigator>
   );

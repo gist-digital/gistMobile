@@ -10,12 +10,13 @@ import Text from '../Text';
 import Image from '../Image';
 import {logo} from '@src/utils/helpers';
 import {Theme} from '@src/styles/theme';
-import {dummyFunc} from '@src/utils/helpers';
 import {HeaderProps} from '@src/interfaces/content';
 import {HeaderNavigationProps} from '@src/interfaces/navigation';
 import {
   XL,
+  HOME,
   SEARCH,
+  PROFILE,
   BTN_TAP_OPACITY,
   PRIMARY_MEDIUM_FONT,
 } from '@src/utils/constants';
@@ -24,8 +25,11 @@ const DefaultLeftEl: FC = () => {
   const theme = useTheme<Theme>();
   const {full} = theme.borderRadii;
 
+  const navigation = useNavigation<HeaderNavigationProps>();
+  const handleNav = () => navigation.navigate(PROFILE);
+
   return (
-    <TouchableOpacity onPress={dummyFunc} activeOpacity={BTN_TAP_OPACITY}>
+    <TouchableOpacity onPress={handleNav} activeOpacity={BTN_TAP_OPACITY}>
       <Image
         width={XL}
         height={XL}
@@ -37,8 +41,11 @@ const DefaultLeftEl: FC = () => {
 };
 
 const DefaultTitle: FC = () => {
+  const navigation = useNavigation<HeaderNavigationProps>();
+  const handleNav = () => navigation.navigate(HOME);
+
   return (
-    <TouchableOpacity onPress={dummyFunc} activeOpacity={BTN_TAP_OPACITY}>
+    <TouchableOpacity onPress={handleNav} activeOpacity={BTN_TAP_OPACITY}>
       <Image
         source={logo}
         width={RFValue(70)}

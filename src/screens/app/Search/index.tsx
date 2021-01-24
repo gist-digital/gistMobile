@@ -17,7 +17,7 @@ import {
   S,
   L,
   XXS,
-  XL9,
+  XL10,
   BTN_TAP_OPACITY,
   PRIMARY_MEDIUM_FONT,
   PRIMARY_REGULAR_FONT,
@@ -45,9 +45,9 @@ const ListHeader: FC = () => {
                   activeOpacity={BTN_TAP_OPACITY}>
                   <Box alignItems="center">
                     <Image
-                      width={XL9}
-                      height={XL9}
-                      borderRadius={XL9 / 3.5}
+                      width={XL10}
+                      height={XL10}
+                      borderRadius={XL10 / 3.5}
                       source={{
                         uri: 'https://source.unsplash.com/C8Ta0gwPbQg/96x96',
                       }}

@@ -7,3 +7,4 @@ export {default as RegistrationIntro} from './auth/RegistrationIntro';
 // app
 export {default as Home} from './app/Home';
 export {default as Search} from './app/Search';
+export {default as Profile} from './app/Profile';

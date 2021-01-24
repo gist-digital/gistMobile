@@ -5,7 +5,9 @@ import {M} from '@src/utils/constants';
 import {Theme} from '@src/styles/theme';
 import {IconProps} from '@src/interfaces/content';
 
+import ArrowLeft from './ArrowLeft';
 import Bell from './Bell';
+import Cog from './Cog';
 import Home from './Home';
 import Search from './Search';
 
@@ -19,8 +21,14 @@ const Icon: FC<IconProps> = ({
   const xmlColor = theme.colors[color];
 
   switch (name) {
+    case 'arrow_left':
+      return <ArrowLeft width={width} height={height} color={xmlColor} />;
+
     case 'bell':
       return <Bell width={width} height={height} color={xmlColor} />;
+
+    case 'cog':
+      return <Cog width={width} height={height} color={xmlColor} />;
 
     case 'home':
       return <Home width={width} height={height} color={xmlColor} />;
