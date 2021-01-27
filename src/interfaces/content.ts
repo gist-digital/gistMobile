@@ -15,6 +15,7 @@ type Icons =
   | 'arrow_left'
   | 'arrow_right'
   | 'bell'
+  | 'check'
   | 'cog'
   | 'home'
   | 'logo'

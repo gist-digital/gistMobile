@@ -11,6 +11,7 @@ export const SEARCH = 'Search';
 export const PROFILE = 'Profile';
 export const SETTINGS = 'Settings';
 export const NOTIFICATIONS = 'Notifications';
+export const NOTIFICATIONS_FREQUENCY = 'NotificationsFrequency';
 
 // colors
 export const ALT = '#FFC177';

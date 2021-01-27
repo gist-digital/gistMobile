@@ -1,5 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Switch} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import {
@@ -9,8 +10,10 @@ import {
   BTN_TAP_OPACITY,
   PRIMARY_MEDIUM_FONT,
   PRIMARY_REGULAR_FONT,
+  NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
 import {dummyFunc} from '@src/utils/helpers';
+import {SettingsNavigationProps} from '@src/interfaces/navigation';
 import {Box, Icon, Text, SectionList, SafeAreaView} from '@src/components';
 
 const DATA = [
@@ -76,8 +79,11 @@ const DATA = [
 ];
 
 const HasPress = ({title, value}) => {
+  const navigation = useNavigation<SettingsNavigationProps>();
+  const handleNav = () => navigation.navigate(NOTIFICATIONS_FREQUENCY);
+
   return (
-    <TouchableOpacity onPress={dummyFunc} activeOpacity={BTN_TAP_OPACITY}>
+    <TouchableOpacity onPress={handleNav} activeOpacity={BTN_TAP_OPACITY}>
       <Box
         height={XL6}
         paddingLeft="m"

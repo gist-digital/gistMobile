@@ -31,3 +31,7 @@ export type TextFieldProps = Pick<SpacingProps<Theme>, 'marginBottom'> &
   > & {
     error?: string;
   };
+
+export type RadioInput = {
+  checked: boolean;
+};

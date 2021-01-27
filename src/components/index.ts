@@ -9,6 +9,7 @@ export {default as Gradient} from './content/Gradient';
 export {default as MaskedView} from './content/MaskedView';
 
 // inputs
+export {default as Radio} from './inputs/Radio';
 export {default as Button} from './inputs/Button';
 export {default as TextInput} from './inputs/TextInput';
 

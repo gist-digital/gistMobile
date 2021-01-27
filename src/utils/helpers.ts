@@ -47,3 +47,11 @@ export const roomData = [
       'Are you a poet or a writer? | Tips for writing your next best seller',
   },
 ];
+
+export const notificationFrequencyOptions = [
+  'Very Frequent',
+  'Frequent',
+  'Normal',
+  'Infrequent',
+  'Very Infrequent',
+];

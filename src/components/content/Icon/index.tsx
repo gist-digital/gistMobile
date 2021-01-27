@@ -8,6 +8,7 @@ import {IconProps} from '@src/interfaces/content';
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 import Bell from './Bell';
+import Check from './Check';
 import Cog from './Cog';
 import Home from './Home';
 import Logo from './Logo';
@@ -31,6 +32,9 @@ const Icon: FC<IconProps> = ({
 
     case 'bell':
       return <Bell width={width} height={height} color={xmlColor} />;
+
+    case 'check':
+      return <Check width={width} height={height} color={xmlColor} />;
 
     case 'cog':
       return <Cog width={width} height={height} color={xmlColor} />;

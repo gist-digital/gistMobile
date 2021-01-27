@@ -10,3 +10,4 @@ export {default as Search} from './app/Search';
 export {default as Profile} from './app/Profile';
 export {default as Settings} from './app/Settings';
 export {default as Notifications} from './app/Notifications';
+export {default as NotificationFrequency} from './app/Settings/NotificationFrequency';

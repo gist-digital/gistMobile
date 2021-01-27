@@ -11,13 +11,21 @@ import {
   SETTINGS,
   NOTIFICATIONS,
   BTN_TAP_OPACITY,
+  NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
 import {
   AppStackParamList,
   HeaderNavigationProps,
 } from '@src/interfaces/navigation';
 import {Header, Icon} from '@src/components';
-import {Home, Search, Profile, Settings, Notifications} from '@src/screens';
+import {
+  Home,
+  Search,
+  Profile,
+  Settings,
+  Notifications,
+  NotificationFrequency,
+} from '@src/screens';
 
 const Stack = createStackNavigator<AppStackParamList>();
 
@@ -93,6 +101,17 @@ const App = () => {
         component={Notifications}
         options={{
           title: NOTIFICATIONS,
+          header: (props) => (
+            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+          ),
+        }}
+      />
+
+      <Stack.Screen
+        name={NOTIFICATIONS_FREQUENCY}
+        component={NotificationFrequency}
+        options={{
+          title: undefined,
           header: (props) => (
             <Header {...props} LeftEl={<BackButton />} RightEl={null} />
           ),
