@@ -6,6 +6,7 @@ import {Theme} from '@src/styles/theme';
 import {IconProps} from '@src/interfaces/content';
 
 import ArrowLeft from './ArrowLeft';
+import ArrowRight from './ArrowRight';
 import Bell from './Bell';
 import Cog from './Cog';
 import Home from './Home';
@@ -24,6 +25,9 @@ const Icon: FC<IconProps> = ({
   switch (name) {
     case 'arrow_left':
       return <ArrowLeft width={width} height={height} color={xmlColor} />;
+
+    case 'arrow_right':
+      return <ArrowRight width={width} height={height} color={xmlColor} />;
 
     case 'bell':
       return <Bell width={width} height={height} color={xmlColor} />;

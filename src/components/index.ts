@@ -15,6 +15,7 @@ export {default as TextInput} from './inputs/TextInput';
 // native
 export {default as FlatList} from './native/FlatList';
 export {default as ScrollView} from './native/ScrollView';
+export {default as SectionList} from './native/SectionList';
 export {default as SafeAreaView} from './native/SafeAreaView';
 export {default as KeyboardAvoidingView} from './native/KeyboardAvoidingView';
 

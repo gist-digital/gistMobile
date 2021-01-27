@@ -8,6 +8,7 @@ import {
   HOME,
   SEARCH,
   PROFILE,
+  SETTINGS,
   NOTIFICATIONS,
 } from '@src/utils/constants';
 
@@ -15,6 +16,7 @@ export type AuthStackParamList = {
   [INTRO]: undefined;
   [LOGIN]: undefined;
   [REGISTER]: undefined;
+
   [REGISTRATION_INTRO]: undefined;
 };
 
@@ -22,6 +24,7 @@ export type AppStackParamList = {
   [HOME]: undefined;
   [SEARCH]: undefined;
   [PROFILE]: undefined;
+  [SETTINGS]: undefined;
   [NOTIFICATIONS]: undefined;
 };
 

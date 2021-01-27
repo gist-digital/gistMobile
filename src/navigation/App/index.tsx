@@ -3,17 +3,21 @@ import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Header, Icon} from '@src/components';
-import {AppStackParamList} from '@src/interfaces/navigation';
-import {Home, Search, Profile, Notifications} from '@src/screens';
 import {
   L,
   HOME,
-  PROFILE,
   SEARCH,
+  PROFILE,
+  SETTINGS,
   NOTIFICATIONS,
   BTN_TAP_OPACITY,
 } from '@src/utils/constants';
+import {
+  AppStackParamList,
+  HeaderNavigationProps,
+} from '@src/interfaces/navigation';
+import {Header, Icon} from '@src/components';
+import {Home, Search, Profile, Settings, Notifications} from '@src/screens';
 
 const Stack = createStackNavigator<AppStackParamList>();
 
@@ -33,8 +37,11 @@ const BackButton: FC = () => {
 };
 
 const SettingsButton: FC = () => {
+  const navigation = useNavigation<HeaderNavigationProps>();
+  const handleNav = () => navigation.navigate(SETTINGS);
+
   return (
-    <TouchableOpacity onPress={() => null} activeOpacity={BTN_TAP_OPACITY}>
+    <TouchableOpacity onPress={handleNav} activeOpacity={BTN_TAP_OPACITY}>
       <Icon name="cog" />
     </TouchableOpacity>
   );
@@ -66,6 +73,17 @@ const App = () => {
               LeftEl={<BackButton />}
               RightEl={<SettingsButton />}
             />
+          ),
+        }}
+      />
+
+      <Stack.Screen
+        name={SETTINGS}
+        component={Settings}
+        options={{
+          title: undefined,
+          header: (props) => (
+            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
           ),
         }}
       />

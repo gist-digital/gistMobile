@@ -9,6 +9,7 @@ export const REGISTRATION_INTRO = 'RegistrationIntro';
 export const HOME = 'Home';
 export const SEARCH = 'Search';
 export const PROFILE = 'Profile';
+export const SETTINGS = 'Settings';
 export const NOTIFICATIONS = 'Notifications';
 
 // colors

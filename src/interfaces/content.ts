@@ -11,7 +11,14 @@ export type ImageProps = {
   resizeMode?: ResizeMode;
 } & ImageStyle;
 
-type Icons = 'arrow_left' | 'bell' | 'cog' | 'home' | 'logo' | 'search';
+type Icons =
+  | 'arrow_left'
+  | 'arrow_right'
+  | 'bell'
+  | 'cog'
+  | 'home'
+  | 'logo'
+  | 'search';
 
 export type IconProps = {
   name: Icons;
