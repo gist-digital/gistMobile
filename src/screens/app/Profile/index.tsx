@@ -28,7 +28,7 @@ const Profile = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Box flex={1} paddingTop="l" paddingHorizontal="l">
+        <Box flex={1} paddingTop="m" paddingHorizontal="l">
           <Box flexDirection="row">
             <Box marginRight="m" flexShrink={0}>
               <Image

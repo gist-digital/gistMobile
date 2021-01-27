@@ -8,3 +8,4 @@ export {default as RegistrationIntro} from './auth/RegistrationIntro';
 export {default as Home} from './app/Home';
 export {default as Search} from './app/Search';
 export {default as Profile} from './app/Profile';
+export {default as Notifications} from './app/Notifications';

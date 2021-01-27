@@ -65,11 +65,16 @@ const Header: FC<HeaderProps> = ({scene, LeftEl, RightEl}) => {
   const {options} = scene.descriptor;
   const {title} = options;
 
+  const isRightElNull = RightEl === null;
+
   return (
     <SafeAreaView>
-      <Box paddingTop="s" paddingHorizontal="l" backgroundColor="dark">
+      <Box
+        paddingTop="s"
+        paddingBottom="xs"
+        paddingHorizontal="l"
+        backgroundColor="dark">
         <Box
-          // backgroundColor="primary"
           flexWrap="wrap"
           flexDirection="row"
           alignItems="center"
@@ -106,7 +111,7 @@ const Header: FC<HeaderProps> = ({scene, LeftEl, RightEl}) => {
             flexDirection="row"
             paddingHorizontal="s"
             justifyContent="flex-end">
-            {RightEl || <DefaultRightEl />}
+            {isRightElNull ? null : RightEl || <DefaultRightEl />}
           </Box>
         </Box>
       </Box>

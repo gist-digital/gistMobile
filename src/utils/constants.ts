@@ -9,6 +9,7 @@ export const REGISTRATION_INTRO = 'RegistrationIntro';
 export const HOME = 'Home';
 export const SEARCH = 'Search';
 export const PROFILE = 'Profile';
+export const NOTIFICATIONS = 'Notifications';
 
 // colors
 export const ALT = '#FFC177';
@@ -28,7 +29,7 @@ export const M = RFValue(24);
 export const L = RFValue(32);
 export const XL = RFValue(40);
 export const XL6 = RFValue(48);
-// export const XL7 = RFValue(56);
+export const XL7 = RFValue(56);
 export const XL8 = RFValue(64);
 export const XL9 = RFValue(72);
 export const XL10 = RFValue(80);

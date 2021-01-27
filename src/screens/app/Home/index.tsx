@@ -13,7 +13,8 @@ import {
 } from '@src/components';
 import {RoomItemProps} from '@src/interfaces/content';
 import {roomData, dummyFunc} from '@src/utils/helpers';
-import {XXS, S, M, BTN_TAP_OPACITY} from '@src/utils/constants';
+import {HomeScreenProps} from '@src/interfaces/navigation';
+import {XXS, S, M, NOTIFICATIONS, BTN_TAP_OPACITY} from '@src/utils/constants';
 
 const StartRoomIcon: FC = () => {
   const iconDimension = XXS + S;
@@ -35,7 +36,11 @@ const MaskedElement: FC = () => {
   return <Box height={M} backgroundColor="dark" />;
 };
 
-const Home = () => {
+const Home = ({navigation}: HomeScreenProps) => {
+  const goToNotificationsScreen = () => {
+    navigation.navigate(NOTIFICATIONS);
+  };
+
   const renderItem = ({item}: {item: RoomItemProps}) => (
     <Item type={item.type} host={item.host} title={item.title} />
   );
@@ -81,8 +86,8 @@ const Home = () => {
             paddingHorizontal="s"
             justifyContent="center">
             <TouchableOpacity
-              onPress={dummyFunc}
-              activeOpacity={BTN_TAP_OPACITY}>
+              activeOpacity={BTN_TAP_OPACITY}
+              onPress={goToNotificationsScreen}>
               <Icon name="bell" />
             </TouchableOpacity>
           </Box>

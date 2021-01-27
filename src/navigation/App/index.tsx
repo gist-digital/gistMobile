@@ -4,9 +4,16 @@ import {useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Header, Icon} from '@src/components';
-import {Home, Search, Profile} from '@src/screens';
 import {AppStackParamList} from '@src/interfaces/navigation';
-import {L, HOME, PROFILE, SEARCH, BTN_TAP_OPACITY} from '@src/utils/constants';
+import {Home, Search, Profile, Notifications} from '@src/screens';
+import {
+  L,
+  HOME,
+  PROFILE,
+  SEARCH,
+  NOTIFICATIONS,
+  BTN_TAP_OPACITY,
+} from '@src/utils/constants';
 
 const Stack = createStackNavigator<AppStackParamList>();
 
@@ -59,6 +66,17 @@ const App = () => {
               LeftEl={<BackButton />}
               RightEl={<SettingsButton />}
             />
+          ),
+        }}
+      />
+
+      <Stack.Screen
+        name={NOTIFICATIONS}
+        component={Notifications}
+        options={{
+          title: NOTIFICATIONS,
+          header: (props) => (
+            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
           ),
         }}
       />

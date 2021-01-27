@@ -23,7 +23,7 @@ export type IconProps = {
 export type IconsSVGProps = Omit<IconProps, 'name' | 'color'> & {color: string};
 
 export type HeaderProps = StackHeaderProps & {
-  RightEl?: ReactElement;
+  RightEl?: ReactElement | null;
   LeftEl?: ReactElement;
 };
 
