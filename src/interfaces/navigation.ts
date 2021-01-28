@@ -10,6 +10,7 @@ import {
   PROFILE,
   SETTINGS,
   NOTIFICATIONS,
+  AVATAR_UPDATE,
   NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
 
@@ -27,6 +28,7 @@ export type AppStackParamList = {
   [PROFILE]: undefined;
   [SETTINGS]: undefined;
   [NOTIFICATIONS]: undefined;
+  [AVATAR_UPDATE]: undefined;
   [NOTIFICATIONS_FREQUENCY]: undefined;
 };
 
@@ -37,6 +39,10 @@ export type HeaderNavigationProps = StackNavigationProp<
 
 export type HomeScreenProps = {
   navigation: StackNavigationProp<AppStackParamList, 'Home'>;
+};
+
+export type ProfileScreenProps = {
+  navigation: StackNavigationProp<AppStackParamList, 'Profile'>;
 };
 
 export type SettingsNavigationProps = StackNavigationProp<

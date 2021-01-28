@@ -2,16 +2,18 @@ import React from 'react';
 import {TouchableOpacity} from 'react-native';
 import {useTheme} from '@shopify/restyle';
 
-import {Theme} from '@src/styles/theme';
-import {dummyFunc} from '@src/utils/helpers';
 import {
   L,
   XL12,
   XL13,
+  AVATAR_UPDATE,
   BTN_TAP_OPACITY,
   PRIMARY_MEDIUM_FONT,
   PRIMARY_REGULAR_FONT,
 } from '@src/utils/constants';
+import {Theme} from '@src/styles/theme';
+import {dummyFunc} from '@src/utils/helpers';
+import {ProfileScreenProps} from '@src/interfaces/navigation';
 import {
   Box,
   Text,
@@ -21,9 +23,13 @@ import {
   SafeAreaView,
 } from '@src/components';
 
-const Profile = () => {
+const Profile = ({navigation}: ProfileScreenProps) => {
   const theme = useTheme<Theme>();
   const {full} = theme.borderRadii;
+
+  const handleAvatarNav = () => {
+    navigation.navigate(AVATAR_UPDATE);
+  };
 
   return (
     <SafeAreaView>
@@ -31,12 +37,19 @@ const Profile = () => {
         <Box flex={1} paddingTop="m" paddingHorizontal="l">
           <Box flexDirection="row">
             <Box marginRight="m" flexShrink={0}>
-              <Image
-                width={XL13}
-                height={XL13}
-                borderRadius={full}
-                source={{uri: 'https://source.unsplash.com/C8Ta0gwPbQg/96x96'}}
-              />
+              <TouchableOpacity
+                onPress={handleAvatarNav}
+                activeOpacity={BTN_TAP_OPACITY}
+                style={{width: XL13, height: XL13, borderRadius: full}}>
+                <Image
+                  width={XL13}
+                  height={XL13}
+                  borderRadius={full}
+                  source={{
+                    uri: 'https://source.unsplash.com/C8Ta0gwPbQg/96x96',
+                  }}
+                />
+              </TouchableOpacity>
             </Box>
 
             <Box flex={1}>

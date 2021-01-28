@@ -120,7 +120,7 @@ const Notifications = () => {
         <FlatList
           data={data}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => `${item.id}`}
           contentContainerStyle={{paddingTop: M}}
         />
       </Box>

@@ -10,6 +10,7 @@ import {
   PROFILE,
   SETTINGS,
   NOTIFICATIONS,
+  AVATAR_UPDATE,
   BTN_TAP_OPACITY,
   NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
@@ -23,6 +24,7 @@ import {
   Search,
   Profile,
   Settings,
+  AvatarUpdate,
   Notifications,
   NotificationFrequency,
 } from '@src/screens';
@@ -101,6 +103,17 @@ const App = () => {
         component={Notifications}
         options={{
           title: NOTIFICATIONS,
+          header: (props) => (
+            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+          ),
+        }}
+      />
+
+      <Stack.Screen
+        name={AVATAR_UPDATE}
+        component={AvatarUpdate}
+        options={{
+          title: undefined,
           header: (props) => (
             <Header {...props} LeftEl={<BackButton />} RightEl={null} />
           ),
