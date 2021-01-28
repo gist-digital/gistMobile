@@ -6,6 +6,7 @@ import {
   L,
   XL12,
   XL13,
+  BIO_UPDATE,
   AVATAR_UPDATE,
   BTN_TAP_OPACITY,
   PRIMARY_MEDIUM_FONT,
@@ -29,6 +30,10 @@ const Profile = ({navigation}: ProfileScreenProps) => {
 
   const handleAvatarNav = () => {
     navigation.navigate(AVATAR_UPDATE);
+  };
+
+  const handleBioNav = () => {
+    navigation.navigate(BIO_UPDATE);
   };
 
   return (
@@ -109,7 +114,9 @@ const Profile = ({navigation}: ProfileScreenProps) => {
             </Box>
           </Box>
 
-          <TouchableOpacity onPress={dummyFunc} activeOpacity={BTN_TAP_OPACITY}>
+          <TouchableOpacity
+            onPress={handleBioNav}
+            activeOpacity={BTN_TAP_OPACITY}>
             <Text
               variant="bodyM"
               color="light"

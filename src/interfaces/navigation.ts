@@ -9,8 +9,9 @@ import {
   SEARCH,
   PROFILE,
   SETTINGS,
-  NOTIFICATIONS,
+  BIO_UPDATE,
   AVATAR_UPDATE,
+  NOTIFICATIONS,
   NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
 
@@ -27,8 +28,9 @@ export type AppStackParamList = {
   [SEARCH]: undefined;
   [PROFILE]: undefined;
   [SETTINGS]: undefined;
-  [NOTIFICATIONS]: undefined;
+  [BIO_UPDATE]: undefined;
   [AVATAR_UPDATE]: undefined;
+  [NOTIFICATIONS]: undefined;
   [NOTIFICATIONS_FREQUENCY]: undefined;
 };
 

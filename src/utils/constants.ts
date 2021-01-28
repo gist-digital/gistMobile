@@ -10,8 +10,9 @@ export const HOME = 'Home';
 export const SEARCH = 'Search';
 export const PROFILE = 'Profile';
 export const SETTINGS = 'Settings';
-export const NOTIFICATIONS = 'Notifications';
+export const BIO_UPDATE = 'BioUpdate';
 export const AVATAR_UPDATE = 'AvatarUpdate';
+export const NOTIFICATIONS = 'Notifications';
 export const NOTIFICATIONS_FREQUENCY = 'NotificationsFrequency';
 
 // colors
