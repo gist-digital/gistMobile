@@ -2,17 +2,19 @@ import React, {FC} from 'react';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import Box from '../../content/Box';
-import {S, M} from '@src/utils/constants';
+import {S, M, L} from '@src/utils/constants';
 import Icon from '../../content/Icon';
 import {RadioInput} from '@src/interfaces/inputs';
 
-const Radio: FC<RadioInput> = ({checked}) => {
+const Radio: FC<RadioInput> = ({checked, size = 'm'}) => {
+  const boxDimension = size === 'm' ? M : L;
+
   return (
     <Box
-      width={M}
-      height={M}
       borderColor="light"
       borderRadius="full"
+      width={boxDimension}
+      height={boxDimension}
       borderWidth={RFValue(1)}>
       {checked && (
         <Box

@@ -1,7 +1,11 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {
+  TransitionPresets,
+  createStackNavigator,
+  StackNavigationOptions,
+} from '@react-navigation/stack';
 
 import {
   L,
@@ -60,8 +64,24 @@ const SettingsButton: FC = () => {
 };
 
 const App = () => {
+  const screenOptions = useMemo<StackNavigationOptions>(
+    () => ({
+      ...TransitionPresets.SlideFromRightIOS,
+      headerShown: true,
+      safeAreaInsets: {top: 0},
+      cardStyle: {
+        overflow: 'visible',
+        backgroundColor: '#000000',
+      },
+    }),
+    [],
+  );
+
   return (
-    <Stack.Navigator headerMode="screen" initialRouteName={HOME}>
+    <Stack.Navigator
+      headerMode="screen"
+      initialRouteName={HOME}
+      screenOptions={screenOptions}>
       <Stack.Screen
         name={HOME}
         component={Home}

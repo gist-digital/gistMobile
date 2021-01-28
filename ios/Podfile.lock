@@ -324,7 +324,7 @@ PODS:
     - SDWebImageWebPCoder (~> 0.6.1)
   - RNGestureHandler (1.9.0):
     - React-Core
-  - RNReanimated (2.0.0-alpha.9.2):
+  - RNReanimated (2.0.0-rc.2):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -577,7 +577,7 @@ SPEC CHECKSUMS:
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNFastImage: d4870d58f5936111c56218dbd7fcfc18e65b58ff
   RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
-  RNReanimated: 174b2c7890664aeb522640bd5b86b464f0abf0ca
+  RNReanimated: e8a1520b15df106c96214161078c69e4a23b8b29
   RNScreens: 45c457af3d2ee9e08fc01e70da87e653d46b1198
   RNSentry: 51972e3fe50e2fb38ae459af8c87d61f63f364db
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e

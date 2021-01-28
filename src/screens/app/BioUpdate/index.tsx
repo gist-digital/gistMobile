@@ -40,9 +40,9 @@ const BioUpdate = () => {
                 <TextInput
                   multiline
                   style={styles.input}
+                  onChangeText={dummyFunc}
                   defaultValue={`Hi, I’m Meena. I’m a law student and the CEO of beatbox.
                   \n Interests: Beauty & Law`}
-                  onChangeText={(text) => console.log(text)}
                 />
               </Box>
             </Box>
