@@ -72,7 +72,7 @@ const Header: FC<HeaderProps> = ({scene, LeftEl, RightEl}) => {
       <Box
         paddingTop="s"
         paddingBottom="xs"
-        paddingHorizontal="l"
+        paddingHorizontal="m"
         backgroundColor="dark">
         <Box
           flexWrap="wrap"

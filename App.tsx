@@ -36,8 +36,8 @@ const App = () => {
   return (
     <ThemeProvider theme={primaryTheme}>
       <NavigationContainer>
-        {/* <Auth /> */}
-        <AppNav />
+        <Auth />
+        {/* <AppNav /> */}
       </NavigationContainer>
     </ThemeProvider>
   );

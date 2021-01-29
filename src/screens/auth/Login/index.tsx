@@ -23,7 +23,7 @@ const Login = () => {
     <SafeAreaView>
       <KeyboardAvoidingView>
         <ScrollView>
-          <Box flex={1} paddingHorizontal="l" paddingVertical="xl6">
+          <Box flex={1} paddingHorizontal="m" paddingVertical="xl6">
             <Box alignItems="center">
               <Icon width={RFValue(60)} height={RFValue(60)} name="logo" />
             </Box>

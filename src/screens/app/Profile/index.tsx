@@ -39,7 +39,7 @@ const Profile = ({navigation}: ProfileScreenProps) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Box flex={1} paddingTop="m" paddingHorizontal="l">
+        <Box flex={1} paddingTop="m" paddingHorizontal="m">
           <Box flexDirection="row">
             <Box marginRight="m" flexShrink={0}>
               <TouchableOpacity

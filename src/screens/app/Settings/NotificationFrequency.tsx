@@ -54,8 +54,8 @@ const NotificationFrequency = () => {
       <ScrollView>
         <Box
           flex={1}
-          paddingHorizontal="l"
           paddingTop="m"
+          paddingHorizontal="m"
           backgroundColor="dark">
           <Text
             color="light"

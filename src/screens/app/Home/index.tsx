@@ -108,7 +108,7 @@ const SuggestionItem = () => {
 };
 
 const Item: FC<RoomItemProps> = ({type, host, title}) => (
-  <Box paddingHorizontal="l" marginBottom="m">
+  <Box paddingHorizontal="m" marginBottom="m">
     <RoomItem type={type} host={host} title={title} />
   </Box>
 );
@@ -136,11 +136,7 @@ const TopicSheet: FC<{
   };
 
   return (
-    <Box
-      height="100%"
-      paddingVertical="m"
-      paddingHorizontal="l"
-      backgroundColor="dark">
+    <Box height="100%" padding="m" backgroundColor="dark">
       <Text
         variant="bodyL"
         color="light"
@@ -213,11 +209,7 @@ const PingSheet: FC = () => {
   const renderItem = () => <SuggestionItem />;
 
   return (
-    <Box
-      height="100%"
-      paddingVertical="m"
-      paddingHorizontal="l"
-      backgroundColor="dark">
+    <Box padding="m" height="100%" backgroundColor="dark">
       <Text
         color="light"
         variant="bodyL"
@@ -359,7 +351,7 @@ const Home = ({navigation}: HomeScreenProps) => {
           </Box>
         </Box>
 
-        <Box paddingHorizontal="l" paddingBottom="xl">
+        <Box paddingHorizontal="m" paddingBottom="xl">
           <Box
             flexWrap="wrap"
             flexDirection="row"

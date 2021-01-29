@@ -36,7 +36,7 @@ const AvatarUpdate = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Box flex={1} paddingTop="m" paddingHorizontal="l">
+        <Box flex={1} paddingTop="m" paddingHorizontal="m">
           <Box alignItems="center" padding="m">
             <TouchableOpacity
               onPress={handleLaunch}

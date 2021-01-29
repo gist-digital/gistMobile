@@ -21,7 +21,7 @@ const BioUpdate = () => {
     <SafeAreaView>
       <KeyboardAvoidingView>
         <ScrollView>
-          <Box flex={1} paddingTop="m" paddingHorizontal="l">
+          <Box flex={1} paddingTop="m" paddingHorizontal="m">
             <Text
               color="light"
               variant="bodyL"

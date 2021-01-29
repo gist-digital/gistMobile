@@ -17,6 +17,7 @@ import {
   S,
   L,
   XXS,
+  XL6,
   XL10,
   BTN_TAP_OPACITY,
   PRIMARY_MEDIUM_FONT,
@@ -28,7 +29,7 @@ import {categories, roomData, dummyFunc} from '@src/utils/helpers';
 
 const ListHeader: FC = () => {
   return (
-    <Box flex={1} paddingTop="s" paddingBottom="m" paddingHorizontal="l">
+    <Box flex={1} paddingTop="s" paddingBottom="m" paddingHorizontal="m">
       <Box marginBottom="xl">
         <Text variant="bodyL" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
           People to follow
@@ -108,7 +109,7 @@ const ListHeader: FC = () => {
 };
 
 const Item: FC<RoomItemProps> = ({type, host, title}) => (
-  <Box paddingHorizontal="l" marginBottom="m">
+  <Box paddingHorizontal="m" marginBottom="m">
     <RoomItem type={type} host={host} title={title} />
   </Box>
 );
@@ -136,18 +137,18 @@ const Search = () => {
   return (
     <SafeAreaView>
       <KeyboardAvoidingView>
-        <Box paddingTop="xl6" paddingHorizontal="l">
+        <Box paddingTop="xl6" paddingHorizontal="m">
           <Text variant="h2" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
             Explore gists
           </Text>
 
           <Box
+            height={XL6}
             marginTop="m"
-            marginBottom="xs"
             borderRadius="s"
+            marginBottom="xs"
             flexDirection="row"
             alignItems="center"
-            paddingVertical="s"
             paddingHorizontal="s"
             backgroundColor="grey2">
             <Icon

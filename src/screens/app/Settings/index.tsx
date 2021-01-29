@@ -134,7 +134,7 @@ const NotificationsItem = ({index, item}) => {
   const {title, type, value} = item;
 
   return (
-    <Box paddingHorizontal="l" marginTop={isFirst ? 'xs' : undefined}>
+    <Box paddingHorizontal="m" marginTop={isFirst ? 'xs' : undefined}>
       <Box
         overflow="hidden"
         backgroundColor="grey2"
@@ -157,7 +157,7 @@ const InfoItem = ({item}) => {
   const {action, title} = item;
 
   return (
-    <Box paddingHorizontal="l" marginVertical="xxs">
+    <Box paddingHorizontal="m" marginVertical="xxs">
       <Box overflow="hidden" backgroundColor="grey2" borderRadius="s">
         <TouchableOpacity onPress={dummyFunc} activeOpacity={BTN_TAP_OPACITY}>
           <Box
@@ -195,7 +195,7 @@ const Settings = () => {
 
   const renderHeader = ({section: {title}}) => {
     return (
-      <Box paddingHorizontal="l" backgroundColor="dark" paddingBottom="xs">
+      <Box paddingHorizontal="m" backgroundColor="dark" paddingBottom="xs">
         <Text color="light" variant="bodyL" fontFamily={PRIMARY_MEDIUM_FONT}>
           {title}
         </Text>

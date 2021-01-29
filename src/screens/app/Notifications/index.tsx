@@ -28,7 +28,7 @@ const FollowItem = () => {
   const {full} = theme.borderRadii;
 
   return (
-    <Box paddingHorizontal="l" marginBottom="m">
+    <Box paddingHorizontal="m" marginBottom="m">
       <Box flexDirection="row" marginHorizontal="-xs">
         <Box paddingHorizontal="xs">
           <TouchableOpacity
@@ -83,7 +83,7 @@ const Item = () => {
   const {full} = theme.borderRadii;
 
   return (
-    <Box paddingHorizontal="l" marginBottom="m">
+    <Box paddingHorizontal="m" marginBottom="m">
       <Box flexDirection="row" marginHorizontal="-xs">
         <Box paddingHorizontal="xs">
           <TouchableOpacity

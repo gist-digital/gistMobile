@@ -23,7 +23,7 @@ import {
   AppStackParamList,
   HeaderNavigationProps,
 } from '@src/interfaces/navigation';
-import {Header, Icon} from '@src/components';
+import {Box, Text, Header, Icon} from '@src/components';
 import {
   Home,
   Search,
@@ -78,92 +78,98 @@ const App = () => {
   );
 
   return (
-    <Stack.Navigator
-      headerMode="screen"
-      initialRouteName={HOME}
-      screenOptions={screenOptions}>
-      <Stack.Screen
-        name={HOME}
-        component={Home}
-        options={{title: undefined, header: Header}}
-      />
+    <Box flex={1}>
+      <Stack.Navigator
+        headerMode="screen"
+        initialRouteName={HOME}
+        screenOptions={screenOptions}>
+        <Stack.Screen
+          name={HOME}
+          component={Home}
+          options={{title: undefined, header: Header}}
+        />
 
-      <Stack.Screen
-        name={SEARCH}
-        component={Search}
-        options={{title: undefined, headerShown: false}}
-      />
+        <Stack.Screen
+          name={SEARCH}
+          component={Search}
+          options={{title: undefined, headerShown: false}}
+        />
 
-      <Stack.Screen
-        name={PROFILE}
-        component={Profile}
-        options={{
-          title: undefined,
-          header: (props) => (
-            <Header
-              {...props}
-              LeftEl={<BackButton />}
-              RightEl={<SettingsButton />}
-            />
-          ),
-        }}
-      />
+        <Stack.Screen
+          name={PROFILE}
+          component={Profile}
+          options={{
+            title: undefined,
+            header: (props) => (
+              <Header
+                {...props}
+                LeftEl={<BackButton />}
+                RightEl={<SettingsButton />}
+              />
+            ),
+          }}
+        />
 
-      <Stack.Screen
-        name={SETTINGS}
-        component={Settings}
-        options={{
-          title: undefined,
-          header: (props) => (
-            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
-          ),
-        }}
-      />
+        <Stack.Screen
+          name={SETTINGS}
+          component={Settings}
+          options={{
+            title: undefined,
+            header: (props) => (
+              <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+            ),
+          }}
+        />
 
-      <Stack.Screen
-        name={BIO_UPDATE}
-        component={BioUpdate}
-        options={{
-          title: undefined,
-          header: (props) => (
-            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
-          ),
-        }}
-      />
+        <Stack.Screen
+          name={BIO_UPDATE}
+          component={BioUpdate}
+          options={{
+            title: undefined,
+            header: (props) => (
+              <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+            ),
+          }}
+        />
 
-      <Stack.Screen
-        name={AVATAR_UPDATE}
-        component={AvatarUpdate}
-        options={{
-          title: undefined,
-          header: (props) => (
-            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
-          ),
-        }}
-      />
+        <Stack.Screen
+          name={AVATAR_UPDATE}
+          component={AvatarUpdate}
+          options={{
+            title: undefined,
+            header: (props) => (
+              <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+            ),
+          }}
+        />
 
-      <Stack.Screen
-        name={NOTIFICATIONS}
-        component={Notifications}
-        options={{
-          title: NOTIFICATIONS,
-          header: (props) => (
-            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
-          ),
-        }}
-      />
+        <Stack.Screen
+          name={NOTIFICATIONS}
+          component={Notifications}
+          options={{
+            title: NOTIFICATIONS,
+            header: (props) => (
+              <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+            ),
+          }}
+        />
 
-      <Stack.Screen
-        name={NOTIFICATIONS_FREQUENCY}
-        component={NotificationFrequency}
-        options={{
-          title: undefined,
-          header: (props) => (
-            <Header {...props} LeftEl={<BackButton />} RightEl={null} />
-          ),
-        }}
-      />
-    </Stack.Navigator>
+        <Stack.Screen
+          name={NOTIFICATIONS_FREQUENCY}
+          component={NotificationFrequency}
+          options={{
+            title: undefined,
+            header: (props) => (
+              <Header {...props} LeftEl={<BackButton />} RightEl={null} />
+            ),
+          }}
+        />
+      </Stack.Navigator>
+
+      <Box backgroundColor="dark">
+        <Text color="light">dsdsd</Text>
+      </Box>
+    </Box>
   );
 };
 

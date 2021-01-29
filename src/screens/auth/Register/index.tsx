@@ -118,7 +118,7 @@ const TabBar: FC<{activeIndex: number}> = ({activeIndex}) => {
 const Step1: FC = () => {
   return (
     <ScrollView>
-      <Box paddingTop="xl8" paddingHorizontal="l">
+      <Box paddingTop="xl8" paddingHorizontal="m">
         <Text variant="h2" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
           What’s your name and email?
         </Text>
@@ -131,7 +131,7 @@ const Step1: FC = () => {
 const Step2: FC = () => {
   return (
     <ScrollView>
-      <Box paddingTop="xl8" paddingHorizontal="l">
+      <Box paddingTop="xl8" paddingHorizontal="m">
         <Text variant="h2" color="light" fontFamily={PRIMARY_MEDIUM_FONT}>
           Create your Gist username and password
         </Text>
@@ -153,7 +153,7 @@ const Step3: FC = () => {
   const renderItem = () => <Item />;
 
   return (
-    <Box paddingHorizontal="l" flex={1}>
+    <Box paddingHorizontal="m" flex={1}>
       <FlatList
         data={DATA}
         renderItem={renderItem}
