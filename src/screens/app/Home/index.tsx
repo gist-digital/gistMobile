@@ -381,7 +381,7 @@ const Home = ({navigation}: HomeScreenProps) => {
           </Box>
         </Box>
 
-        <BottomSheet
+        {/* <BottomSheet
           index={-1}
           ref={topicSheetRef}
           snapPoints={snapPoints}
@@ -407,7 +407,7 @@ const Home = ({navigation}: HomeScreenProps) => {
           <BottomSheetView>
             <PingSheet />
           </BottomSheetView>
-        </BottomSheet>
+        </BottomSheet>*/}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

@@ -6,6 +6,8 @@ export {default as Image} from './content/Image';
 export {default as Header} from './content/Header';
 export {default as RoomItem} from './content/RoomItem';
 export {default as Gradient} from './content/Gradient';
+export {default as RoomSheet} from './content/RoomSheet';
+export {default as RoomAvatar} from './content/RoomAvatar';
 export {default as MaskedView} from './content/MaskedView';
 
 // inputs

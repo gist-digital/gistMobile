@@ -22,6 +22,8 @@ export const LIGHT = '#FFFFFF';
 export const GREY1 = '#B2B4B4';
 export const GREY2 = '#282828';
 export const PRIMARY = '#ED1C24';
+export const SUCCESS = '#579B55';
+export const SUCCESS_ACCENT = '#E4F8D5';
 export const PRIMARY_ACCENT = '#A00D12';
 export const TRANSPARENT = 'transparent';
 
@@ -37,7 +39,7 @@ export const XL7 = RFValue(56);
 export const XL8 = RFValue(64);
 export const XL9 = RFValue(72);
 export const XL10 = RFValue(80);
-// export const XL11 = RFValue(88);
+export const XL11 = RFValue(88);
 export const XL12 = RFValue(96);
 export const XL13 = RFValue(104);
 export const NEGATIVE = -1;

@@ -1,14 +1,12 @@
-import React, {FC, useMemo} from 'react';
-import {TouchableOpacity} from 'react-native';
+import React, {FC} from 'react';
+import {TouchableOpacity, Dimensions} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {
-  TransitionPresets,
-  createStackNavigator,
-  StackNavigationOptions,
-} from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
+import {useSharedValue} from 'react-native-reanimated';
 
 import {
   L,
+  XL8,
   HOME,
   SEARCH,
   PROFILE,
@@ -20,10 +18,11 @@ import {
   NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
 import {
+  RoomSheetDisplay,
   AppStackParamList,
   HeaderNavigationProps,
 } from '@src/interfaces/navigation';
-import {Box, Text, Header, Icon} from '@src/components';
+import {Box, Icon, Header, RoomSheet} from '@src/components';
 import {
   Home,
   Search,
@@ -64,25 +63,15 @@ const SettingsButton: FC = () => {
 };
 
 const App = () => {
-  const screenOptions = useMemo<StackNavigationOptions>(
-    () => ({
-      ...TransitionPresets.SlideFromRightIOS,
-      headerShown: true,
-      safeAreaInsets: {top: 0},
-      cardStyle: {
-        overflow: 'visible',
-        backgroundColor: '#000000',
-      },
-    }),
-    [],
-  );
+  const {height} = Dimensions.get('window');
+  const MIN_APP_HEIGHT = height - XL8;
+
+  const roomTranslateY = useSharedValue(MIN_APP_HEIGHT);
+  const roomDisplayType = useSharedValue<RoomSheetDisplay>('mini');
 
   return (
     <Box flex={1}>
-      <Stack.Navigator
-        headerMode="screen"
-        initialRouteName={HOME}
-        screenOptions={screenOptions}>
+      <Stack.Navigator headerMode="screen" initialRouteName={HOME}>
         <Stack.Screen
           name={HOME}
           component={Home}
@@ -166,9 +155,11 @@ const App = () => {
         />
       </Stack.Navigator>
 
-      <Box backgroundColor="dark">
-        <Text color="light">dsdsd</Text>
-      </Box>
+      <RoomSheet
+        translateY={roomTranslateY}
+        displayType={roomDisplayType}
+        minAppHeight={MIN_APP_HEIGHT}
+      />
     </Box>
   );
 };

@@ -22,8 +22,10 @@ import {
   GREY1,
   GREY2,
   PRIMARY,
+  SUCCESS,
   TRANSPARENT,
   PRIMARY_ACCENT,
+  SUCCESS_ACCENT,
 
   // fonts
   H1,
@@ -41,8 +43,10 @@ const palette = {
   grey1: GREY1,
   grey2: GREY2,
   primary: PRIMARY,
+  success: SUCCESS,
   transparent: TRANSPARENT,
   primaryAccent: PRIMARY_ACCENT,
+  successAccent: SUCCESS_ACCENT,
 };
 
 export const primaryTheme = createTheme({
@@ -53,8 +57,10 @@ export const primaryTheme = createTheme({
     grey1: palette.grey1,
     grey2: palette.grey2,
     primary: palette.primary,
+    success: palette.success,
     transparent: palette.transparent,
     primaryAccent: palette.primaryAccent,
+    successAccent: palette.successAccent,
   },
   spacing: {
     xxs: XXS,

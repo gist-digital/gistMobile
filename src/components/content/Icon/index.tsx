@@ -12,7 +12,11 @@ import Check from './Check';
 import Cog from './Cog';
 import Home from './Home';
 import Logo from './Logo';
+import Mic from './Mic';
+import MicOff from './MicOff';
+import MicOffColor from './MicOffColor';
 import Search from './Search';
+import Star from './Star';
 
 const Icon: FC<IconProps> = ({
   name,
@@ -45,8 +49,20 @@ const Icon: FC<IconProps> = ({
     case 'logo':
       return <Logo width={width} height={height} color={xmlColor} />;
 
+    case 'mic':
+      return <Mic width={width} height={height} color={xmlColor} />;
+
+    case 'mic_off':
+      return <MicOff width={width} height={height} color={xmlColor} />;
+
+    case 'mic_off_color':
+      return <MicOffColor width={width} height={height} color={xmlColor} />;
+
     case 'search':
       return <Search width={width} height={height} color={xmlColor} />;
+
+    case 'star':
+      return <Star width={width} height={height} color={xmlColor} />;
 
     default:
       return null;
