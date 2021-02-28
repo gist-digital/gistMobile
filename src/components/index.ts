@@ -26,3 +26,9 @@ export {default as KeyboardAvoidingView} from './native/KeyboardAvoidingView';
 export {default as LoginForm} from './forms/Login';
 export {default as RegistrationStep1} from './forms/RegistrationStep1';
 export {default as RegistrationStep2} from './forms/RegistrationStep2';
+
+// Bottom Sheet
+export {
+  BottomSheetHandle,
+  BottomSheetBackground,
+} from './content/BottomSheetHelpers';

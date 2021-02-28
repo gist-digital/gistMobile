@@ -55,12 +55,6 @@ export type RoomItemProps = {
   type: 'idea' | 'story' | 'trending' | 'fiction';
 };
 
-export type RoomSheetProps = {
-  minAppHeight: number;
-  translateY: Animated.SharedValue<number>;
-  displayType: Animated.SharedValue<RoomSheetDisplay>;
-};
-
 export type RoomAvatarProps = {
   mute: boolean;
   username: string;

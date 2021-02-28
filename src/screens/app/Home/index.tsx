@@ -4,7 +4,6 @@ import BottomSheet, {
   BottomSheetView,
   BottomSheetFlatList,
   BottomSheetBackdrop,
-  BottomSheetBackgroundProps,
 } from '@gorhom/bottom-sheet';
 import {useTheme} from '@shopify/restyle';
 
@@ -20,7 +19,9 @@ import {
   FlatList,
   MaskedView,
   SafeAreaView,
+  BottomSheetHandle,
   KeyboardAvoidingView,
+  BottomSheetBackground,
 } from '@src/components';
 import {Theme} from '@src/styles/theme';
 import {roomData, dummyFunc} from '@src/utils/helpers';
@@ -40,17 +41,6 @@ import {
 } from '@src/utils/constants';
 
 const snapPoints = [0, '60%', '100%'];
-
-const BottomSheetBackground = ({style}: BottomSheetBackgroundProps) => {
-  return (
-    <Box
-      style={style}
-      borderTopLeftRadius="m"
-      backgroundColor="grey2"
-      borderTopRightRadius="m"
-    />
-  );
-};
 
 const StartRoomIcon: FC = () => {
   const iconDimension = XXS + S;
@@ -389,6 +379,7 @@ const Home = ({navigation}: HomeScreenProps) => {
         ref={topicSheetRef}
         snapPoints={snapPoints}
         onChange={handleSheetChanges}
+        handleComponent={BottomSheetHandle}
         backdropComponent={BottomSheetBackdrop}
         backgroundComponent={BottomSheetBackground}>
         <BottomSheetView>
@@ -404,6 +395,7 @@ const Home = ({navigation}: HomeScreenProps) => {
         index={-1}
         ref={pingSheetRef}
         snapPoints={snapPoints}
+        handleComponent={BottomSheetHandle}
         onChange={handleSheetChanges}
         backdropComponent={BottomSheetBackdrop}
         backgroundComponent={BottomSheetBackground}>

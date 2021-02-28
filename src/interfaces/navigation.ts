@@ -63,5 +63,3 @@ export type SettingsNavigationProps = StackNavigationProp<
   AppStackParamList,
   'Settings'
 >;
-
-export type RoomSheetDisplay = 'hidden' | 'mini' | 'full';

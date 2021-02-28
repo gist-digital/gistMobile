@@ -1,18 +1,10 @@
-import React, {FC, useRef} from 'react';
-import {TouchableOpacity, Dimensions} from 'react-native';
+import React, {FC} from 'react';
+import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-// import {useSharedValue} from 'react-native-reanimated';
-import BottomSheet, {
-  BottomSheetView,
-  BottomSheetFlatList,
-  BottomSheetBackdrop,
-  BottomSheetBackgroundProps,
-} from '@gorhom/bottom-sheet';
 
 import {
   L,
-  XL8,
   HOME,
   SEARCH,
   PROFILE,
@@ -24,11 +16,10 @@ import {
   NOTIFICATIONS_FREQUENCY,
 } from '@src/utils/constants';
 import {
-  RoomSheetDisplay,
   AppStackParamList,
   HeaderNavigationProps,
 } from '@src/interfaces/navigation';
-import {Box, Icon, Header, Text, RoomSheet} from '@src/components';
+import {Box, Icon, Header, RoomSheet} from '@src/components';
 import {
   Home,
   Search,
@@ -40,7 +31,6 @@ import {
   NotificationFrequency,
 } from '@src/screens';
 
-const snapPoints = ['10%', '40%', '80%'];
 const Stack = createStackNavigator<AppStackParamList>();
 
 const BackButton: FC = () => {
@@ -69,25 +59,7 @@ const SettingsButton: FC = () => {
   );
 };
 
-const BottomSheetBackground = ({style}: BottomSheetBackgroundProps) => {
-  return (
-    <Box
-      style={style}
-      borderTopLeftRadius="m"
-      backgroundColor="grey2"
-      borderTopRightRadius="m"
-    />
-  );
-};
-
 const App = () => {
-  const pingSheetRef = useRef<BottomSheet>(null);
-  // const {height} = Dimensions.get('window');
-  // const MIN_APP_HEIGHT = height - XL8;
-
-  // const roomTranslateY = useSharedValue(MIN_APP_HEIGHT);
-  // const roomDisplayType = useSharedValue<RoomSheetDisplay>('mini');
-
   return (
     <Box flex={1}>
       <Stack.Navigator headerMode="screen" initialRouteName={HOME}>
@@ -174,24 +146,7 @@ const App = () => {
         />
       </Stack.Navigator>
 
-      <BottomSheet
-        index={0}
-        ref={pingSheetRef}
-        snapPoints={snapPoints}
-        backdropComponent={BottomSheetBackdrop}
-        backgroundComponent={BottomSheetBackground}>
-        <BottomSheetView>
-          <Box>
-            <Text>adsdsdsdsdsdsdsds</Text>
-          </Box>
-        </BottomSheetView>
-      </BottomSheet>
-
-      {/* <RoomSheet
-        translateY={roomTranslateY}
-        displayType={roomDisplayType}
-        minAppHeight={MIN_APP_HEIGHT}
-      /> */}
+      <RoomSheet />
     </Box>
   );
 };
