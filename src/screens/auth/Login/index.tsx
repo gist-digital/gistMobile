@@ -4,8 +4,9 @@ import {RFValue} from 'react-native-responsive-fontsize';
 
 import {
   BTN_TAP_OPACITY,
-  PRIMARY_REGULAR_FONT,
+  REGISTRATION_INTRO,
   PRIMARY_MEDIUM_FONT,
+  PRIMARY_REGULAR_FONT,
 } from '@src/utils/constants';
 import {
   Box,
@@ -16,9 +17,14 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
 } from '@src/components';
+import {LoginScreenProps} from '@src/interfaces/navigation';
 import {dummyFunc} from '@src/utils/helpers';
 
-const Login = () => {
+const Login = ({navigation}: LoginScreenProps) => {
+  const hanleRegistrationIntroNav = () => {
+    navigation.navigate(REGISTRATION_INTRO);
+  };
+
   return (
     <SafeAreaView>
       <KeyboardAvoidingView>
@@ -42,8 +48,8 @@ const Login = () => {
             </Box>
 
             <TouchableOpacity
-              activeOpacity={BTN_TAP_OPACITY}
-              onPress={dummyFunc}>
+              onPress={hanleRegistrationIntroNav}
+              activeOpacity={BTN_TAP_OPACITY}>
               <Text
                 color="light"
                 variant="bodyL"

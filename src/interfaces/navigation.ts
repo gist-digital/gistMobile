@@ -34,6 +34,18 @@ export type AppStackParamList = {
   [NOTIFICATIONS_FREQUENCY]: undefined;
 };
 
+export type IntroScreenProps = {
+  navigation: StackNavigationProp<AuthStackParamList, 'Intro'>;
+};
+
+export type RegistrationIntroScreenProps = {
+  navigation: StackNavigationProp<AuthStackParamList, 'RegistrationIntro'>;
+};
+
+export type LoginScreenProps = {
+  navigation: StackNavigationProp<AuthStackParamList, 'Login'>;
+};
+
 export type HeaderNavigationProps = StackNavigationProp<
   AppStackParamList,
   'Home' | 'Search'

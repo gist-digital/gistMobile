@@ -13,11 +13,14 @@ import {
 } from '@src/components';
 import {
   M,
+  LOGIN,
+  REGISTER,
   BTN_TAP_OPACITY,
-  PRIMARY_REGULAR_FONT,
   PRIMARY_MEDIUM_FONT,
+  PRIMARY_REGULAR_FONT,
 } from '@src/utils/constants';
 import {dummyFunc} from '@src/utils/helpers';
+import {RegistrationIntroScreenProps} from '@src/interfaces/navigation';
 
 const twitter = require('../../../assets/images/twitter.webp');
 const facebook = require('../../../assets/images/facebook.webp');
@@ -31,7 +34,15 @@ const SocialIcon: FC<{source: number}> = ({source}) => {
   );
 };
 
-const RegistrationIntro = () => {
+const RegistrationIntro = ({navigation}: RegistrationIntroScreenProps) => {
+  const handleRegisterNav = () => {
+    navigation.navigate(REGISTER);
+  };
+
+  const handleLoginNav = () => {
+    navigation.navigate(LOGIN);
+  };
+
   return (
     <SafeAreaView>
       <ScrollView>
@@ -77,10 +88,12 @@ const RegistrationIntro = () => {
           </Box>
 
           <Box marginBottom="s">
-            <Button onPress={dummyFunc} label="Sign up" />
+            <Button onPress={handleRegisterNav} label="Sign up" />
           </Box>
 
-          <TouchableOpacity activeOpacity={BTN_TAP_OPACITY} onPress={dummyFunc}>
+          <TouchableOpacity
+            onPress={handleLoginNav}
+            activeOpacity={BTN_TAP_OPACITY}>
             <Text
               color="light"
               variant="bodyL"

@@ -328,88 +328,90 @@ const Home = ({navigation}: HomeScreenProps) => {
   );
 
   return (
-    <SafeAreaView>
-      <KeyboardAvoidingView>
-        <Box flex={1} position="relative">
-          <FlatList
-            data={roomData}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id}
-            contentContainerStyle={{paddingTop: S}}
-          />
-
-          <Box height={M} bottom={0} width="100%" position="absolute">
-            <MaskedView element={<MaskedElement />}>
-              <Gradient
-                colors={[
-                  'transparent',
-                  'rgba(0, 0, 0, 0.5)',
-                  'rgba(0, 0, 0, 1)',
-                ]}
-              />
-            </MaskedView>
-          </Box>
-        </Box>
-
-        <Box paddingHorizontal="m" paddingBottom="xl">
-          <Box
-            flexWrap="wrap"
-            flexDirection="row"
-            alignItems="center"
-            marginHorizontal="-s"
-            justifyContent="flex-end">
-            <Box width="60%" paddingHorizontal="s">
-              <Button
-                label="Start room"
-                onPress={openTopicSheet}
-                icon={<StartRoomIcon />}
-              />
-            </Box>
-
-            <Box
-              width="20%"
-              alignItems="center"
-              flexDirection="row"
-              paddingHorizontal="s"
-              justifyContent="center">
-              <TouchableOpacity
-                activeOpacity={BTN_TAP_OPACITY}
-                onPress={goToNotificationsScreen}>
-                <Icon name="bell" />
-              </TouchableOpacity>
-            </Box>
-          </Box>
-        </Box>
-
-        {/* <BottomSheet
-          index={-1}
-          ref={topicSheetRef}
-          snapPoints={snapPoints}
-          onChange={handleSheetChanges}
-          backdropComponent={BottomSheetBackdrop}
-          backgroundComponent={BottomSheetBackground}>
-          <BottomSheetView>
-            <TopicSheet
-              openPingSheet={openPingSheet}
-              snapTo={topicSheetRef?.current?.snapTo}
-              isKeyboardVisible={isKeyboardVisible}
+    <>
+      <SafeAreaView>
+        <KeyboardAvoidingView>
+          <Box flex={1} position="relative">
+            <FlatList
+              data={roomData}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.id}
+              contentContainerStyle={{paddingTop: S}}
             />
-          </BottomSheetView>
-        </BottomSheet>
 
-        <BottomSheet
-          index={-1}
-          ref={pingSheetRef}
-          snapPoints={snapPoints}
-          onChange={handleSheetChanges}
-          backdropComponent={BottomSheetBackdrop}
-          backgroundComponent={BottomSheetBackground}>
-          <BottomSheetView>
-            <PingSheet />
-          </BottomSheetView>
-        </BottomSheet>*/}
-      </KeyboardAvoidingView>
-    </SafeAreaView>
+            <Box height={M} bottom={0} width="100%" position="absolute">
+              <MaskedView element={<MaskedElement />}>
+                <Gradient
+                  colors={[
+                    'transparent',
+                    'rgba(0, 0, 0, 0.5)',
+                    'rgba(0, 0, 0, 1)',
+                  ]}
+                />
+              </MaskedView>
+            </Box>
+          </Box>
+
+          <Box paddingHorizontal="m" paddingBottom="xl">
+            <Box
+              flexWrap="wrap"
+              flexDirection="row"
+              alignItems="center"
+              marginHorizontal="-s"
+              justifyContent="flex-end">
+              <Box width="60%" paddingHorizontal="s">
+                <Button
+                  label="Start room"
+                  onPress={openTopicSheet}
+                  icon={<StartRoomIcon />}
+                />
+              </Box>
+
+              <Box
+                width="20%"
+                alignItems="center"
+                flexDirection="row"
+                paddingHorizontal="s"
+                justifyContent="center">
+                <TouchableOpacity
+                  activeOpacity={BTN_TAP_OPACITY}
+                  onPress={goToNotificationsScreen}>
+                  <Icon name="bell" />
+                </TouchableOpacity>
+              </Box>
+            </Box>
+          </Box>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
+
+      <BottomSheet
+        index={-1}
+        ref={topicSheetRef}
+        snapPoints={snapPoints}
+        onChange={handleSheetChanges}
+        backdropComponent={BottomSheetBackdrop}
+        backgroundComponent={BottomSheetBackground}>
+        <BottomSheetView>
+          <TopicSheet
+            openPingSheet={openPingSheet}
+            snapTo={topicSheetRef?.current?.snapTo}
+            isKeyboardVisible={isKeyboardVisible}
+          />
+        </BottomSheetView>
+      </BottomSheet>
+
+      <BottomSheet
+        index={-1}
+        ref={pingSheetRef}
+        snapPoints={snapPoints}
+        onChange={handleSheetChanges}
+        backdropComponent={BottomSheetBackdrop}
+        backgroundComponent={BottomSheetBackground}>
+        <BottomSheetView>
+          <PingSheet />
+        </BottomSheetView>
+      </BottomSheet>
+    </>
   );
 };
 

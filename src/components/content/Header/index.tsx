@@ -62,13 +62,16 @@ const DefaultRightEl: FC = () => {
 };
 
 const Header: FC<HeaderProps> = ({scene, LeftEl, RightEl}) => {
+  const theme = useTheme<Theme>();
+  const {dark} = theme.colors;
+
   const {options} = scene.descriptor;
   const {title} = options;
 
   const isRightElNull = RightEl === null;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor: dark}}>
       <Box
         paddingTop="s"
         paddingBottom="xs"

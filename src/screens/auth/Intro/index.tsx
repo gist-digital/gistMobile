@@ -5,11 +5,12 @@ import Onboarding from 'react-native-onboarding-swiper';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import {Theme} from '@src/styles/theme';
-import {dummyFunc} from '@src/utils/helpers';
 import {Text, Image, Box, Button} from '@src/components';
+import {IntroScreenProps} from '@src/interfaces/navigation';
 import {
   L,
   XL9,
+  REGISTRATION_INTRO,
   PRIMARY_MEDIUM_FONT,
   PRIMARY_REGULAR_FONT,
 } from '@src/utils/constants';
@@ -54,11 +55,16 @@ const SlideImage: FC<{source: number}> = ({source}) => {
   );
 };
 
-const Intro = () => {
+const Intro = ({navigation}: IntroScreenProps) => {
   const theme = useTheme<Theme>();
   const {dark} = theme.colors;
 
   const pagesObj = {title: '', backgroundColor: dark};
+
+  const handleRegistrationNav = () => {
+    navigation.navigate(REGISTRATION_INTRO);
+  };
+
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -89,7 +95,10 @@ const Intro = () => {
             subtitle: (
               <SubTitle text="Or join Gist Rooms with friends and influencers">
                 <Box width="100%" marginTop="xl">
-                  <Button onPress={dummyFunc} label="Ok, sign me up" />
+                  <Button
+                    onPress={handleRegistrationNav}
+                    label="Ok, sign me up"
+                  />
                 </Box>
               </SubTitle>
             ),
